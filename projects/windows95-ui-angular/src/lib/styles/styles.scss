@@ -1,0 +1,86 @@
+//////////////////////////////// Scrollbar ////////////////////////////////
+::-webkit-scrollbar {
+	width: 26px;
+	height: 26px;
+}
+
+::-webkit-scrollbar-button {
+	box-sizing: border-box;
+	height: 26px;
+	width: 26px;
+	background: 0px 0px / 100% no-repeat rgb(198, 198, 198);
+	color: rgb(10, 10, 10);
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+	outline-offset: -2px;
+	box-shadow: rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: rgb(198, 198, 198);
+}
+
+::-webkit-scrollbar-thumb {
+	box-sizing: border-box;
+	display: inline-block;
+	background: rgb(198, 198, 198);
+	color: rgb(10, 10, 10);
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+	outline-offset: -2px;
+	box-shadow: rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(254, 254, 254);
+	background-image: linear-gradient(45deg, rgb(198, 198, 198) 25%, transparent 25%, transparent 75%, rgb(198, 198, 198) 75%), linear-gradient(45deg, rgb(198, 198, 198) 25%, transparent 25%, transparent 75%, rgb(198, 198, 198) 75%);
+	background-size: 4px 4px;
+	background-position: 0px 0px, 2px 2px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,00 00,50 100,50'/></svg>");
+    background-position: 3px 6px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 100,00'/></svg>");
+    background-position: 3px 6px;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='00,50 50,00 50,100'/></svg>");
+    background-position: 6px 3px;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 00,100'/></svg>");
+    background-position: 6px 3px;
+}
+
+/////////Fonts////////////////////////////////////////////////////////
+@font-face {
+	font-family: ms-sans-serif;
+	src:
+		url('ms-sans-serif.woff2') format('woff2'),
+		url('ms-sans-serif.woff') format('woff');
+}
+
+* {
+	font-family: ms-sans-serif;
+}
+
+/////////Colors///////////////////////////////////////////////////////
+.bg-default-blue {
+	background-color: #3A6EA5;
+}
+
+.bg-default-teal {
+	background-color: #00807F;
+}
+
+.w-full {
+	width: 100%;
+}
