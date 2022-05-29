@@ -1,0 +1,78 @@
+.windows-dropdown {
+	display: inline-block;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: rgb(10, 10, 10);
+}
+
+ul a {
+	padding: 8px;
+}
+
+ul {
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	min-width: max-content;
+	margin: 0;
+	padding: 4px;
+	background: rgb(198, 198, 198);
+	color: rgb(10, 10, 10);
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+	box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+	z-index: 900;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+li {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	width: 100%;
+	font-size: 1rem;
+	white-space: nowrap;
+	line-height: 28px;
+	color: rgb(10, 10, 10);
+	pointer-events: auto;
+}
+
+li.main-action {
+	font-weight: bold;
+}
+
+li:hover a {
+	background: rgb(6, 0, 132);
+	color: rgb(254, 254, 254);
+	cursor: default;
+}
+
+hr {
+	width: 100%;
+	margin: 0px;
+	border-bottom: 2px solid rgb(254, 254, 254);
+	border-top: 2px solid rgb(132, 133, 132);
+}
+
+li.secondary-action {
+	font-weight: normal;
+}
+
+.windows-dropdown:hover ul {
+	display: block;
+}

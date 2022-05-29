@@ -113,11 +113,21 @@
 	background-color: #00807F;
 }
 
+.white-text {
+	color: white;
+}
+
 ///////Sizing classes/////////////////////////////////////////////////
 .w-full {
 	width: 100%;
 }
 .h-full {
+	height: 100vh;
+}
+.w-viewport {
+	width: 100vw;
+}
+.h-viewport {
 	height: 100vh;
 }
 
@@ -295,4 +305,31 @@
 
 a.unstyled {
 	all: unset;
+}
+
+///////Positioning classes////////////////////////////////////////////
+.absolute {
+	position: absolute;
+}
+.relative {
+	position: relative;
+}
+.fixed {
+	position: fixed;
+}
+.static {
+	position: static;
+}
+
+.bottom-0 {
+	bottom: 0;
+}
+.top-0 {
+	top: 0;
+}
+.left-0 {
+	left: 0;
+}
+.right-0 {
+	right: 0;
 }
