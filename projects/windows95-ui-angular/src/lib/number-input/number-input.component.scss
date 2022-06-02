@@ -1,0 +1,169 @@
+.number-input-wrapper-wrapper {
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.number-input-wrapper {
+	position: relative;
+	box-sizing: border-box;
+	padding: 2px;
+	font-size: 1rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	line-height: 1.5;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 100%;
+	min-height: 36px;
+	background: rgb(255, 255, 255);
+}
+
+.disabled .number-input-wrapper {
+	background: rgb(198, 198, 198);
+}
+
+.number-input-wrapper::before {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	content: "";
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(10, 10, 10) rgb(223, 223, 223) rgb(223, 223, 223) rgb(10, 10, 10);
+	pointer-events: none;
+	box-shadow: rgb(0 0 0 / 20%) 2px 2px 3px inset;
+}
+
+input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	background: none;
+	font-size: 1rem;
+	min-height: 27px;
+	font-family: inherit;
+	color: rgb(10, 10, 10);
+	padding: 0px 8px;
+	-moz-appearance: textfield;
+}
+
+input:disabled {
+	-webkit-text-fill-color: rgb(132, 133, 132);
+	color: rgb(132, 133, 132);
+	text-shadow: rgb(254 254 254) 1px 1px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.button-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	height: 36px;
+	margin-left: 2px;
+}
+
+button {
+	width: 30px;
+	padding: 0px;
+	flex-shrink: 0;
+	height: 50%;
+
+	box-sizing: border-box;
+	background: rgb(198, 198, 198);
+	color: rgb(10, 10, 10);
+	border: none;
+	position: relative;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	font-size: 1rem;
+	user-select: none;
+	font-family: inherit;
+}
+
+button::before {
+	border-left-color: rgb(223, 223, 223);
+	border-top-color: rgb(223, 223, 223);
+	box-shadow: rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+	box-sizing: border-box;
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
+}
+
+button:not(:disabled):active::before {
+	border-color: rgb(10, 10, 10) rgb(254, 254, 254) rgb(254, 254, 254) rgb(10, 10, 10);
+	box-shadow: rgb(132 133 132) 1px 1px 0px 1px inset, rgb(223 223 223) -1px -1px 0px 1px inset;
+}
+
+button::after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+button:active:not(:disabled):focus::after,
+button:not(:disabled):active::after {
+	top: 1px;
+	outline: rgb(10, 10, 10) dotted 2px;
+	outline-offset: -8px;
+}
+
+.button-increment span,
+.button-decrement span {
+	width: 0px;
+	height: 0px;
+	display: inline-block;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+
+.button-increment span {
+	border-bottom: 4px solid rgb(10, 10, 10)
+}
+
+.button-decrement span {
+	border-top: 4px solid rgb(10, 10, 10);
+}
+
+button:disabled {
+	-webkit-text-fill-color: rgb(132, 133, 132);
+	color: rgb(132, 133, 132);
+	text-shadow: rgb(254 254 254) 1px 1px;
+}
+
+.button-increment:disabled span {
+	filter: drop-shadow(rgb(254, 254, 254) 1px 1px 0px);
+	border-bottom-color: rgb(132, 133, 132);
+}
+
+.button-decrement:disabled span {
+	filter: drop-shadow(rgb(254, 254, 254) 1px 1px 0px);
+	border-top-color: rgb(132, 133, 132);
+}

@@ -1,0 +1,16 @@
+<div class="number-input-wrapper-wrapper" [class.disabled] = "disabled">
+	<div class = "number-input-wrapper">
+		<input
+			type = "number"
+			[disabled] = "disabled"
+			[placeholder] = "placeholder"
+			[value] = "value"
+			(keyup) = "changeValue($event.target)"
+			(keydown.backspace) = "changeValue($event.target)"
+		>
+	</div>
+	<div class="button-wrapper">
+		<button class="button-increment" [disabled] = "disabled" (click) = "incrementValue()"><span></span></button>
+		<button class="button-decrement" [disabled] = "disabled" (click) = "decrementValue()"><span></span></button>
+	</div>
+</div>
