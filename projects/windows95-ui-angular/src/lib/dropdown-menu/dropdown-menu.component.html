@@ -1,6 +1,6 @@
 <div class="windows-dropdown relative">
 	<ng-container *ngIf = "menuItems[0]?.routerLink; else noRouterButton">
-		<a [routerLink]="menuItems[0].routerLink">{{menuItems[0].text}}</a>
+		<windows-button styleClass="toolbar-button" [routerLink]="menuItems[0].routerLink">{{menuItems[0].text}}</windows-button>
 	</ng-container>
 	<ng-template #noRouterButton>
 		<a [attr.href]="menuItems[0]?.href ? menuItems[0].href : null" (attr.click)="menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
