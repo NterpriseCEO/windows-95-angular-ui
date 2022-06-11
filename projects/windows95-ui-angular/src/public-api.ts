@@ -10,3 +10,4 @@ export * from './lib/number-input/public-api';
 export * from './lib/tabview/public-api';
 export * from './lib/tab/public-api';
 export * from './lib/fieldset/public-api';
+export * from './lib/window/public-api';
