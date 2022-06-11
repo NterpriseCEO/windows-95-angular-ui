@@ -9,7 +9,8 @@ export class WindowComponent {
 
 	@Input() styleClass: string = "";
 	@Input() title: string = "";
-	@Input() active: boolean = false;
+	@Input() active: boolean = true;
+	@Input() showCloseButton: boolean = true;
 
 	constructor() { }
 }

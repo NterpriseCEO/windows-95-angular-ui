@@ -102,12 +102,21 @@
 @font-face {
 	font-family: ms-sans-serif;
 	src:
-		url('ms-sans-serif.woff2') format('woff2'),
-		url('ms-sans-serif.woff') format('woff');
+		url('ms-sans-serif.woff2') format('woff2');
 }
 
-* {
+@font-face {
+	font-family: ms-sans-serif-bold;
+	src:
+		url('ms-sans-serif-bold.woff2') format('woff2');
+}
+
+*:not(.bold-font) {
 	font-family: ms-sans-serif;
+}
+
+.bold-font {
+	font-family: ms-sans-serif-bold;
 }
 
 /////////Colors///////////////////////////////////////////////////////
