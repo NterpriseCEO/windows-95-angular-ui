@@ -1,0 +1,12 @@
+<div
+	class="avatar"
+	[class.rounded] = "rounded"
+	[style.background-color] = "backgroundColor"
+	[style.width] = "size"
+	[style.height] = "size"
+>
+	<ng-content></ng-content>
+	<ng-container *ngIf = "image">
+		<img [src] = "image"/>
+	</ng-container>
+</div>
