@@ -1,0 +1,16 @@
+<label [attr.data-disabled] = "disabled">
+	<input
+		type = "checkbox"
+		[name] = "name"
+		[value] = "value"
+		[checked] = "checked"
+		(change) = "change($event)"
+		[disabled] = "disabled"
+	>
+	<div class="checkbox">
+		<span class = "checkbox-icon"></span>
+	</div>
+	<span class = "checkbox-text">
+		{{label}}
+	</span>
+</label>

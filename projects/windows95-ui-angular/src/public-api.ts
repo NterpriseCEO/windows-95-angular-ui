@@ -12,3 +12,4 @@ export * from './lib/tab/public-api';
 export * from './lib/fieldset/public-api';
 export * from './lib/window/public-api';
 export * from './lib/avatar/public-api';
+export * from './lib/checkbox/public-api';
