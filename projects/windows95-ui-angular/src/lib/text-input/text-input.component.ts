@@ -24,8 +24,6 @@ export class TextInput {
 	constructor() {}
 
 	changeValue(event: any) {
-		console.log(event.value);
-		
 		this.valueChange.emit(event.value);
 	}
 }

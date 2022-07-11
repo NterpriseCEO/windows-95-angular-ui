@@ -7,6 +7,6 @@
 		<ng-template #other_content>
 			<div class="progress-status" [style.width] = "getProgress()"></div>
 		</ng-template>
-		<span class="progress-bar-number">{{progress}}%</span>
+		<span *ngIf = "!hideStatus" class="progress-bar-number">{{progress}}%</span>
 	</div>
 </div>

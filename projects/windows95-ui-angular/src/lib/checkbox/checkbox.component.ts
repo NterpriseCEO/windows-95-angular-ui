@@ -12,8 +12,10 @@ export class Checkbox {
 	@Input() name = "";
 	@Input() value = "";
 	@Input() checked = false;
+	//Value change
 	@Output() checkedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 	@Input() disabled: boolean = false;
+	//onChange event function
 	@Output() onChecked: EventEmitter<Event> = new EventEmitter();
 
 	change(event: Event) {

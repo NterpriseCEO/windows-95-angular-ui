@@ -10,7 +10,7 @@ label {
 	align-items: center;
 }
 
-label[data-disabled = "true"] {
+label.disabled {
 	color: rgb(132, 133, 132);
 	-webkit-text-fill-color: rgb(132, 133, 132);
 	text-shadow: rgb(254 254 254) 1px 1px;

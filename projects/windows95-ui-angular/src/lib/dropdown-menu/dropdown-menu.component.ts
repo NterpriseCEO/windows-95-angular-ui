@@ -15,6 +15,7 @@ interface MenuItemCommon {
 	text: string;
 }
 
+//Menu items much match one of the following types:
 export type MenuItem = ({
 	routerLink: string;
 	href?: never
