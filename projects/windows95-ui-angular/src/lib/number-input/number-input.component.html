@@ -5,12 +5,28 @@
 			[disabled] = "disabled"
 			[placeholder] = "placeholder"
 			[value] = "value"
+			[min] = "min"
+			max = "10"
 			(keyup) = "changeValue($event.target)"
 			(keydown.backspace) = "changeValue($event.target)"
 		>
 	</div>
 	<div class="button-wrapper">
-		<button class="button-increment" [disabled] = "disabled" (click) = "incrementValue()"><span></span></button>
-		<button class="button-decrement" [disabled] = "disabled" (click) = "decrementValue()"><span></span></button>
+		<button
+			class="button-increment"
+			[disabled] = "disabled"
+			(mousedown) = "incrementValue()"
+			(mouseup) = "cancelValueChange()"
+		>
+			<span></span>
+		</button>
+		<button
+			class="button-decrement"
+			[disabled] = "disabled"
+			(mousedown) = "decrementValue()"
+			(mouseup) = "cancelValueChange()"
+		>
+			<span></span>
+		</button>
 	</div>
 </div>
