@@ -11,6 +11,12 @@ export class WindowComponent {
 	@Input() title: string = "";
 	@Input() active: boolean = true;
 	@Input() showCloseButton: boolean = true;
+	@Input() headerButtons: any[] = [];
 
-	constructor() { }
+	constructor() {}
+}
+
+export interface WindowHeaderButton {
+	text: string;
+	action: () => void;
 }
