@@ -1,19 +1,19 @@
-<div class="windows-dropdown relative">
+<div class = "windows-dropdown relative">
 	<ng-container *ngIf = "menuItems[0]?.routerLink; else noRouterButton">
-		<windows-button styleClass="toolbar-button" [routerLink]="menuItems[0].routerLink">{{menuItems[0].text}}</windows-button>
+		<windows-button styleClass = "toolbar-button" [routerLink] = "menuItems[0].routerLink">{{menuItems[0].text}}</windows-button>
 	</ng-container>
 	<ng-template #noRouterButton>
-		<a [attr.href]="menuItems[0]?.href ? menuItems[0].href : null" (attr.click)="menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
-			<windows-button styleClass="toolbar-button">{{menuItems[0].text}}</windows-button>
+		<a [attr.href] = "menuItems[0]?.href ? menuItems[0].href : null" (attr.click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
+			<windows-button styleClass = "toolbar-button">{{menuItems[0].text}}</windows-button>
 		</a>
 	</ng-template>
-	<ul class="absolute">
-		<li *ngFor="let item of menuItems.slice(1); let i = index">
+	<ul class = "absolute">
+		<li *ngFor = "let item of menuItems.slice(1); let i = index">
 			<ng-container *ngIf = "item?.routerLink; else noRouter">
-				<a [routerLink]="item.routerLink">{{item.text}}</a>
+				<a [routerLink] = "item.routerLink">{{item.text}}</a>
 			</ng-container>
 			<ng-template #noRouter>
-				<a [attr.href]="item?.href ? item.href : null" (attr.click)="item?.onClick ? item?.onClick() : null"> {{item.text}}</a>
+				<a [attr.href] = "item?.href ? item.href : null" (attr.click) = "item?.onClick ? item?.onClick() : null"> {{item.text}}</a>
 			</ng-template>
 		</li>
 	</ul>

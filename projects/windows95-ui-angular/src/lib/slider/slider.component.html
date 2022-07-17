@@ -1,7 +1,7 @@
 <div
-	class="slider"
-	[class.vertical]= "vertical"
-	[class.disabled]="disabled"
+	class = "slider"
+	[class.vertical] = "vertical"
+	[class.disabled] ="disabled"
 	[ngStyle] = "{
 		'width': !vertical ? length : null,
 		'height': vertical ? length : null
@@ -11,21 +11,21 @@
 	(mousemove) = "onDrag($event)"
 	(window:mouseup) = "onDragEnd($event)"
 >
-	<input type="hidden" [value] = "value">
+	<input type = "hidden" [value] = "value">
 
-	<div class="line"></div>
+	<div class = "line"></div>
 
 	<div
-		class="slider-handle"
-		[ngStyle]="{
+		class = "slider-handle"
+		[ngStyle] = "{
 			'left': !vertical ? getPercentageValue()+'%' : '0px',
 			'top': vertical ? (100-getPercentageValue())+'%' : '0px'
 		}"
 		#handle
 	>
 	</div>
-	<div class="tick-list">
-		<div *ngFor = "let tiles of getTickAmount(); let i = index" class="tick">
+	<div class = "tick-list">
+		<div *ngFor = "let tiles of getTickAmount(); let i = index" class = "tick">
 			<span>{{min+(incrementBy*i)}}</span>
 		</div>
 	</div>

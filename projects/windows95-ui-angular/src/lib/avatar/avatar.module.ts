@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { Avatar } from './avatar.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { Avatar } from "./avatar.component";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
 	declarations: [

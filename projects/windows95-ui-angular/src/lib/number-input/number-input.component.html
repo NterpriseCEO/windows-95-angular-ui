@@ -1,4 +1,4 @@
-<div class="number-input-wrapper-wrapper" [class.disabled] = "disabled">
+<div class = "number-input-wrapper-wrapper" [class.disabled] = "disabled">
 	<div class = "number-input-wrapper">
 		<input
 			type = "number"
@@ -11,9 +11,9 @@
 			(keydown.backspace) = "changeValue($event.target)"
 		>
 	</div>
-	<div class="button-wrapper">
+	<div class = "button-wrapper">
 		<button
-			class="button-increment"
+			class = "button-increment"
 			[disabled] = "disabled"
 			(mousedown) = "incrementValue()"
 			(mouseup) = "cancelValueChange()"

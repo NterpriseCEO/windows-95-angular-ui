@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { TabView } from './tabview.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { TabView } from "./tabview.component";
+import { BrowserModule } from "@angular/platform-browser";
 
 
 @NgModule({

@@ -1,2 +1,2 @@
-export * from './window.component';
-export * from './window.module';
+export * from "./window.component";
+export * from "./window.module";

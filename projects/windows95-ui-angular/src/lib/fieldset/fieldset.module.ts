@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Fieldset } from './fieldset.component';
+import { NgModule } from "@angular/core";
+import { Fieldset } from "./fieldset.component";
 
 @NgModule({
 	declarations: [

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { WindowsButton } from './button.component';
+import { NgModule } from "@angular/core";
+import { WindowsButton } from "./button.component";
 
 @NgModule({
 	declarations: [

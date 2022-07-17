@@ -1,5 +1,5 @@
-import { AfterContentInit, Component, QueryList, ContentChildren, ChangeDetectorRef } from '@angular/core';
-import { Tab } from '../tab/tab.component';
+import { AfterContentInit, Component, QueryList, ContentChildren, ChangeDetectorRef } from "@angular/core";
+import { Tab } from "../tab/tab.component";
 
 @Component({
 	selector: "tab-view",

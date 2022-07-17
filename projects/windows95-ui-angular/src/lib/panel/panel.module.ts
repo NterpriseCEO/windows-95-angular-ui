@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { WindowsPanel } from './panel.component';
+import { NgModule } from "@angular/core";
+import { WindowsPanel } from "./panel.component";
 
 @NgModule({
 	declarations: [

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Checkbox } from './checkbox.component';
+import { NgModule } from "@angular/core";
+import { Checkbox } from "./checkbox.component";
 
 @NgModule({
 	declarations: [

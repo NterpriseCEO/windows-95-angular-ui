@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { NumberInput } from './number-input.component';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { NumberInput } from "./number-input.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
 	declarations: [

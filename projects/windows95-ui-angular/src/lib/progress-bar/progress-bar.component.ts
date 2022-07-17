@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, ViewChild } from "@angular/core";
 
 @Component({
 	selector: "progress-bar",
@@ -14,13 +14,13 @@ export class ProgressBar implements AfterViewInit {
 
 	barsCount: number = 0;
 
-	@ViewChild('progressBar') progressBar!: ElementRef;
+	@ViewChild("progressBar") progressBar!: ElementRef;
 
 	ngAfterViewInit() {
 		this.setBarAmount();
 	}
 
-	@HostListener("window:resize", ['$event']) private onResize() {
+	@HostListener("window:resize", ["$event"]) private onResize() {
 		this.setBarAmount();
 	}
 

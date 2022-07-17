@@ -1,2 +1,2 @@
-export * from './tabview.component';
-export * from './tabview.module';
+export * from "./tabview.component";
+export * from "./tabview.module";
