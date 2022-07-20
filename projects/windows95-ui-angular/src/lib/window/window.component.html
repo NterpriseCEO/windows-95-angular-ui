@@ -1,12 +1,12 @@
-<div class = "window" [ngClass] = "styleClass">
-	<div class = "header" [attr.data-active] = "active">
+<div class = "window flex" [ngClass] = "styleClass" [ngStyle] = "styles()">
+	<div class = "header flex-none" [attr.data-active] = "active">
 		<div>
 			<button *ngFor = "let button of headerButtons" (click) = "button.action()">{{button.text}}</button>
 			<span class = "bold-font title">{{title}}</span>
 		</div>
-		<button *ngIf = "showCloseButton"><span class="close-icon"></span></button>
+		<button *ngIf = "showCloseButton" (click) = "onClose.emit(null)"><span class="close-icon"></span></button>
 	</div>
-	<div class="window-content">
+	<div class="window-content flex-grow-1">
 		<ng-content></ng-content>
 	</div>
 </div>

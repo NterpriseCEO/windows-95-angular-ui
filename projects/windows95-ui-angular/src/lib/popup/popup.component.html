@@ -1,0 +1,13 @@
+<div *ngIf = "visible">
+	<window [title] = "title" (onClose) = "rejectPopup()">
+		<div class = "popup-content flex flex-column h-full">
+			<div class = "overflow-auto flex-grow-1">
+				{{message}}
+			</div>
+			<div class = "buttons flex flex-row-reverse">
+				<windows-button class = "no-button" (click) = "rejectPopup()">No</windows-button>
+				<windows-button (click) = "confirmPopup()">Yes</windows-button>
+			</div>
+		</div>
+	</window>
+</div>

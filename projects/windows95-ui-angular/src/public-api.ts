@@ -15,3 +15,4 @@ export * from "./lib/avatar/public-api";
 export * from "./lib/checkbox/public-api";
 export * from "./lib/progress-bar/public-api";
 export * from "./lib/slider/public-api";
+export * from "./lib/popup/public-api";

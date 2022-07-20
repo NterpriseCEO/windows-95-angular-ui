@@ -1,7 +1,8 @@
 .window {
 	position: relative;
     box-sizing: border-box;
-    display: inline-block;
+    display: inline-flex;
+	flex-direction: column;
 	min-width: 400px;
     min-height: 200px;
     padding: 4px;
