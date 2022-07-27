@@ -2,11 +2,20 @@
 	<window [title] = "title" (onClose) = "rejectPopup()">
 		<div class = "popup-content flex flex-column h-full">
 			<div class = "overflow-auto flex-grow-1">
-				{{message}}
+				<ng-container *ngIf = "isText(contents)">{{contents}}</ng-container>
+				<ng-container *ngIf = "!isText(contents)">
+					<ng-container *ngComponentOutlet="contents"></ng-container>
+				</ng-container>
 			</div>
 			<div class = "buttons flex flex-row-reverse">
-				<windows-button class = "no-button" (click) = "rejectPopup()">No</windows-button>
-				<windows-button (click) = "confirmPopup()">Yes</windows-button>
+				<windows-button class = "no-button" (click) = "rejectPopup()">{{rejectText}}</windows-button>
+				<windows-button
+					*ngFor = "let action of popupService.actions"
+					(click) = "action.action()"
+				>
+					{{action.text}}
+				</windows-button>
+				<windows-button *ngIf = "popupService.actions != []" (click) = "confirmPopup()">{{acceptText}}</windows-button>
 			</div>
 		</div>
 	</window>

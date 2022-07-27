@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { AfterViewChecked, ChangeDetectorRef, Component, OnDestroy } from "@angular/core";
+import { PopupAction } from "./popup-properties";
 import { PopupService } from "./popup-service";
 
 @Component({
@@ -6,14 +7,23 @@ import { PopupService } from "./popup-service";
 	templateUrl: "popup.component.html",	
 	styleUrls: ["popup.component.scss"]
 })
-export class PopupComponent {
+export class PopupComponent implements AfterViewChecked, OnDestroy {
 
 	visible: boolean = false;
 	title: string = "";
-	message: string = "";
+	contents: any;
 
-	constructor(public popupService: PopupService) {
+	acceptText: string = "Yes";
+	rejectText: string = "No";
+
+	actions: PopupAction[] = [];
+
+	constructor(public popupService: PopupService, private ref: ChangeDetectorRef) {
 		this.waitForPopup();
+	}
+
+	ngAfterViewChecked() {
+		this.ref.detectChanges();
 	}
 
 	onReject?: () => void = () => {};
@@ -23,18 +33,35 @@ export class PopupComponent {
 		this.popupService.showPopupSubject.subscribe(properties => {
 			this.visible = true;
 			this.title = properties.title;
-			this.message = properties.message;
+			this.contents = properties.contents;
 			this.onReject = properties.onReject;
 			this.onConfirm = properties.onConfirm;
+
+			if(properties.acceptText) this.acceptText = properties.acceptText;
+			if(properties.rejectText) this.rejectText = properties.rejectText;
+		});
+
+		this.popupService.hidePopupSubject.subscribe(() => {
+			this.visible = false;
 		});
 	}
 
 	confirmPopup() {
 		this.visible = false;
+		this.popupService.destroyPopup();
 		this.onConfirm?.();
 	}
 	rejectPopup() {
 		this.visible = false;
+		this.popupService.destroyPopup();
 		this.onReject?.();
+	}
+
+	isText(data: any): data is string {
+		return typeof data === 'string';
+	};
+	ngOnDestroy() {
+		this.popupService.showPopupSubject.unsubscribe();
+		this.popupService.hidePopupSubject.unsubscribe();
 	}
 }

@@ -1,6 +1,13 @@
 export interface PopupProperties {
 	title: string;
-	message: string;
+	contents: any;
+	acceptText?: string;
+	rejectText?: string;
 	onReject?: () => void;
 	onConfirm?: () => void;
+}
+
+export interface PopupAction{
+	text: string;
+	action: () => void;
 }

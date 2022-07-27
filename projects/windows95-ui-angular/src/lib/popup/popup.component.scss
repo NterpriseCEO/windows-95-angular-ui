@@ -10,6 +10,10 @@
 	z-index: 999;
 }
 
+:host:empty {
+	display: none;
+}
+
 .popup-content {
 	width: 400px;
 	min-height: 119px;
