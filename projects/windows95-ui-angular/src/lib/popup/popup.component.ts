@@ -13,8 +13,10 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 	title: string = "";
 	contents: any;
 
-	acceptText: string = "Yes";
+	confirmText: string = "Yes";
 	rejectText: string = "No";
+	showConfirmAction: boolean = true;
+	showRejectAction: boolean = true;
 
 	actions: PopupAction[] = [];
 
@@ -34,11 +36,13 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 			this.visible = true;
 			this.title = properties.title;
 			this.contents = properties.contents;
+			this.showConfirmAction = properties.showConfirmAction ?? true;
+			this.showRejectAction = properties.showRejectAction ?? true;
 			this.onReject = properties.onReject;
 			this.onConfirm = properties.onConfirm;
 
-			if(properties.acceptText) this.acceptText = properties.acceptText;
-			if(properties.rejectText) this.rejectText = properties.rejectText;
+			this.confirmText = properties.confirmText ?? "Yes";
+			this.rejectText = properties.rejectText ?? "No";
 		});
 
 		this.popupService.hidePopupSubject.subscribe(() => {
@@ -61,7 +65,5 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 		return typeof data === 'string';
 	};
 	ngOnDestroy() {
-		this.popupService.showPopupSubject.unsubscribe();
-		this.popupService.hidePopupSubject.unsubscribe();
 	}
 }

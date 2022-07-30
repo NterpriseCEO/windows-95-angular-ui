@@ -23,11 +23,22 @@ export class PopupService implements OnDestroy {
 	constructor() { }
 
 	showPopup(popupProperties: PopupProperties) {
+		this.properties = popupProperties;
 		this.showPopupSubject.next(popupProperties);
 	}
 
 	addAction(action: PopupAction) {
 		this.actions = [...this.actions, action];
+	}
+
+	confirm() {
+		this.properties.onConfirm?.();
+		this.destroyPopup();
+	}
+
+	reject() {
+		this.properties.onReject?.();
+		this.destroyPopup();
 	}
 
 	destroyPopup() {

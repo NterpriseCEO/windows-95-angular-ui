@@ -1,8 +1,10 @@
 export interface PopupProperties {
 	title: string;
 	contents: any;
-	acceptText?: string;
+	confirmText?: string;
 	rejectText?: string;
+	showConfirmAction?: boolean;
+	showRejectAction?: boolean;
 	onReject?: () => void;
 	onConfirm?: () => void;
 }

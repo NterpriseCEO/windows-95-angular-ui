@@ -8,14 +8,29 @@
 				</ng-container>
 			</div>
 			<div class = "buttons flex flex-row-reverse">
-				<windows-button class = "no-button" (click) = "rejectPopup()">{{rejectText}}</windows-button>
+				<ng-container *ngIf = "showRejectAction">
+					<windows-button
+						class = "button-margin"
+						(click) = "rejectPopup()"
+					>
+						{{rejectText}}
+					</windows-button>
+				</ng-container>
+				<ng-container *ngIf = "showConfirmAction">
+					<windows-button
+						class = "button-margin"
+						(click) = "confirmPopup()"
+					>
+						{{confirmText}}
+					</windows-button>
+				</ng-container>
 				<windows-button
 					*ngFor = "let action of popupService.actions"
+					class = "button-margin"
 					(click) = "action.action()"
 				>
 					{{action.text}}
 				</windows-button>
-				<windows-button *ngIf = "popupService.actions != []" (click) = "confirmPopup()">{{acceptText}}</windows-button>
 			</div>
 		</div>
 	</window>
