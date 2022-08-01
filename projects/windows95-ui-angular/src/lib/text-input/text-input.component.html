@@ -1,0 +1,24 @@
+<div class="text-input-wrapper" [class.disabled] = "disabled">
+	<ng-container *ngIf = "!isTextarea">
+		<input
+			type = "text"
+			[disabled] = "disabled"
+			[placeholder] = "placeholder"
+			[value] = "value"
+			(keyup) = "changeValue($event.target)"
+			(keydown.backspace) = "changeValue($event.target)"
+		>
+	</ng-container>
+	<ng-container *ngIf = "isTextarea">
+		<textarea
+			[disabled] = "disabled"
+			[placeholder] = "placeholder"
+			[value] = "value"
+			(keyup) = "changeValue($event.target)"
+			[cols] = "cols"
+			[rows] = "rows"
+			(keydown.backspace) = "changeValue($event.target)"
+		>
+		</textarea>
+	</ng-container>
+</div>

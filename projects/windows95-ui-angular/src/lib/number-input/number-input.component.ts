@@ -16,9 +16,14 @@ export class NumberInput {
 
 	timer: any;
 
+	startTime: number = 0;
+	amount: number = 1;
+
 	constructor() {}
 
 	incrementValue() {
+		this.startTime = Date.now();
+		this.amount = 1;
 		this.timer = setInterval(() => {
 			if(this.value < this.max) {
 				this.value++;
@@ -28,6 +33,8 @@ export class NumberInput {
 	}
 
 	decrementValue() {
+		this.startTime = Date.now();
+		this.amount = -1;
 		this.timer = setInterval(() => {
 			if(this.value > this.min) {
 				this.value--;
@@ -43,5 +50,10 @@ export class NumberInput {
 
 	cancelValueChange() {
 		clearInterval(this.timer);
+
+		if(Date.now() - this.startTime < 250) {
+			this.value += this.amount;
+			this.valueChange.emit(this.value);
+		}
 	}
 }

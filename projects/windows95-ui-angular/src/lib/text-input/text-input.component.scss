@@ -33,7 +33,7 @@
 	}
 }
 
-input {
+input, textarea {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
@@ -52,4 +52,9 @@ input {
 		-webkit-text-fill-color: rgb(132, 133, 132);
 		text-shadow: rgb(254 254 254) 1px 1px;
 	}
+}
+
+textarea {
+    padding: 8px;
+    resize: none;
 }
