@@ -22,6 +22,7 @@ export class NumberInput {
 	constructor() {}
 
 	incrementValue() {
+		//Sets the start time of the click
 		this.startTime = Date.now();
 		this.amount = 1;
 		this.timer = setInterval(() => {
@@ -33,6 +34,7 @@ export class NumberInput {
 	}
 
 	decrementValue() {
+		//Sets the start time of the click
 		this.startTime = Date.now();
 		this.amount = -1;
 		this.timer = setInterval(() => {
@@ -51,6 +53,7 @@ export class NumberInput {
 	cancelValueChange() {
 		clearInterval(this.timer);
 
+		//If the click was less than 250ms, it is a click, otherwise it is a long click
 		if(Date.now() - this.startTime < 250) {
 			this.value += this.amount;
 			this.valueChange.emit(this.value);

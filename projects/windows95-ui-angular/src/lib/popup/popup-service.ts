@@ -27,6 +27,7 @@ export class PopupService implements OnDestroy {
 		this.showPopupSubject.next(popupProperties);
 	}
 
+	//Adds a new action to the popup window
 	addAction(action: PopupAction) {
 		this.actions = [...this.actions, action];
 	}

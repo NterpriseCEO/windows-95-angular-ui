@@ -103,7 +103,6 @@ export class Slider implements OnChanges, AfterViewInit {
 	goToYPosition(event: MouseEvent) {
 		const sliderRect = this.sliderElement.getBoundingClientRect();
 		//Cursor y position relative to the slider
-		// const y = event.pageY-(sliderRect.height + sliderRect.top);
 		const y = event.pageY - sliderRect.top;
 		//New percentage position of the handle
 		const handlePercentage = y / sliderRect.height;
