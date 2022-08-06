@@ -460,6 +460,20 @@ a.unstyled { all: unset; }
 	margin-bottom: auto;
 }
 
+.m-8px { margin: 8px; }
+.ml-8px { margin-left: 8px; }
+.mr-8px { margin-right: 8px; }
+.mt-8px { margin-top: 8px; }
+.mb-8px { margin-bottom: 8px; }
+.mx-8px {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.my-8px {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
 ///////Cursor classes/////////
 .cursor-alias { cursor: alias; }
 .cursor-all-scroll { cursor: all-scroll; }

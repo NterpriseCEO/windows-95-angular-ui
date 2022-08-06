@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Params } from "@angular/router";
 
 @Component({
 	selector: "dropdowm-menu",
@@ -13,6 +14,7 @@ export class DropdownMenu {
 
 interface MenuItemCommon {
 	text: string;
+	queryParams?: Params | null | undefined;
 }
 
 //Menu items much match one of the following types:

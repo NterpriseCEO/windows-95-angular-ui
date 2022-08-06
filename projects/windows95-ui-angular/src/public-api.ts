@@ -16,3 +16,4 @@ export * from "./lib/checkbox/public-api";
 export * from "./lib/progress-bar/public-api";
 export * from "./lib/slider/public-api";
 export * from "./lib/popup/public-api";
+export * from "./lib/file-input/public-api";

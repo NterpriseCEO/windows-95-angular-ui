@@ -1,4 +1,5 @@
-import { AfterContentInit, Component, QueryList, ContentChildren, ChangeDetectorRef } from "@angular/core";
+import { AfterContentInit, Component, QueryList, ContentChildren, ChangeDetectorRef, Input, OnChanges, SimpleChanges } from "@angular/core";
+import { of, skipWhile } from "rxjs";
 import { Tab } from "../tab/tab.component";
 
 @Component({
@@ -6,9 +7,11 @@ import { Tab } from "../tab/tab.component";
 	templateUrl: "./tabview.component.html",
 	styleUrls: ["tabview.component.scss"]
 })
-export class TabView implements AfterContentInit {
+export class TabView implements AfterContentInit, OnChanges {
 
 	@ContentChildren(Tab) tabs!: QueryList<Tab>;
+
+	@Input() selectedTab: number = 0;
 
 	tabTitles: string[] = [];
 
@@ -17,14 +20,24 @@ export class TabView implements AfterContentInit {
 
 	constructor(private ref: ChangeDetectorRef) {}
 
+	ngOnChanges(changes: SimpleChanges) {
+		if(changes["selectedTab"]?.currentValue !== changes["selectedTab"]?.previousValue) {
+			
+			of(this.tabs).pipe(
+				skipWhile((tabs) => tabs === undefined),
+			).subscribe(() => {
+				this.showTab(changes["selectedTab"]?.currentValue);
+			});
+		}
+	}
+
 	ngAfterContentInit() {
 		//Gets list of tab components
-		let tabs = this.tabs.toArray()
+		const tabs = this.tabs.toArray()
 		//Generates list of tab titles
 		tabs.forEach(tab => this.tabTitles.push(tab.title));
 
-		//Sets first tab as active
-		tabs[0].active = true;
+		this.showTab(this.selectedTab);
 
 		//Detects changes so that the tab titles are displayed
 		this.tabTitles = ([] as string[]).concat(this.tabTitles);
