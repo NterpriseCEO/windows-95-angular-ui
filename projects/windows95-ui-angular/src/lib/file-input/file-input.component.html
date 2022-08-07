@@ -1,11 +1,12 @@
 <div>
-	<label>
+	<label [class.disabled] = "disabled">
 		{{text}}
 		<input
 			type = "file"
 			class = "hidden"
 			(change) = "select($event)"
 			[accept] = "accepts"
+			[disabled] = "disabled"
 		>
 	</label>
 	<span *ngIf = "showFileName" class = "inline-block ml-8px">{{file}}</span>
