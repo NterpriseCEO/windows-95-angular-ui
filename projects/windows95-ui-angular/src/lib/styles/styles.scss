@@ -64,6 +64,21 @@
     background-position: 6px 3px;
 }
 
+/////////HR//////////////
+hr[orientation = "vertical"] {
+	display: inline;
+	width: 1px;
+	border-left: 2px solid rgb(132, 133, 132);
+	border-right: 2px solid rgb(254, 254, 254);
+	margin: 0px;
+}
+hr[orientation = "horizontal"] {
+	width: 100%;
+    border-bottom: 2px solid rgb(254, 254, 254);
+    border-top: 2px solid rgb(132, 133, 132);
+    margin: 0px;
+}
+
 //Overflow proeprties
 .overflow-scroll { overflow: scroll; }
 .overflow-auto { overflow: auto; }
