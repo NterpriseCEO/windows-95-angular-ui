@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, ElementRef, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "file-input",
@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 	styleUrls: ["file-input.component.scss"]
 })
 export class FileInput {
-	constructor() { }
+	constructor(private elRef: ElementRef) {}
 
 	@Input() text: string = "Select a file";
 	@Input() disabled: boolean = false;
@@ -21,5 +21,11 @@ export class FileInput {
 	select(event: any) {
 		this.file = event.target.files[0].name; 
 		this.onSelect.emit(event);
+	}
+
+	openModal() {
+		if(!this.disabled) {
+			this.elRef.nativeElement.getElementsByTagName("input")[0].click();
+		}
 	}
 }
