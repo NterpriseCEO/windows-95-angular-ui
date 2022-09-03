@@ -12,8 +12,8 @@ export class PopupService implements OnDestroy {
 	properties: PopupProperties = {
 		title: "",
 		contents: "",
-		onReject: function (): void {},
-		onConfirm: function (): void {}
+		onReject: () => {},
+		onConfirm: (data?: any) => {}
 	};
 
 	public showPopupSubject = new Subject<PopupProperties>();
@@ -32,8 +32,8 @@ export class PopupService implements OnDestroy {
 		this.actions = [...this.actions, action];
 	}
 
-	confirm() {
-		this.properties.onConfirm?.();
+	confirm(data?: any) {
+		this.properties.onConfirm?.(data);
 		this.destroyPopup();
 	}
 

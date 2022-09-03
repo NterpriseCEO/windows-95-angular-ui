@@ -6,7 +6,7 @@ export interface PopupProperties {
 	showConfirmAction?: boolean;
 	showRejectAction?: boolean;
 	onReject?: () => void;
-	onConfirm?: () => void;
+	onConfirm?: (data?: any) => void;
 }
 
 export interface PopupAction{

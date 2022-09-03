@@ -9,7 +9,7 @@
 		</windows-button>
 	</ng-container>
 	<ng-template #noRouterButton>
-		<a [attr.href] = "menuItems[0]?.href ? menuItems[0].href : null" (attr.click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
+		<a [attr.href] = "menuItems[0]?.href ? menuItems[0].href : null" (click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
 			<windows-button styleClass = "toolbar-button">{{menuItems[0].text}}</windows-button>
 		</a>
 	</ng-template>
@@ -19,7 +19,7 @@
 				<a [routerLink] = "item.routerLink" [queryParams]="item?.queryParams">{{item.text}}</a>
 			</ng-container>
 			<ng-template #noRouter>
-				<a [attr.href] = "item?.href ? item.href : null" (attr.click) = "item?.onClick ? item?.onClick() : null"> {{item.text}}</a>
+				<a [attr.href] = "item?.href ? item.href : null" (click) = "item?.onClick ? item?.onClick() : null"> {{item.text}}</a>
 			</ng-template>
 		</li>
 	</ul>

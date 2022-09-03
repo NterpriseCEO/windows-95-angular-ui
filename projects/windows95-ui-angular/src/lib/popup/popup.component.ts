@@ -29,7 +29,7 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 	}
 
 	onReject?: () => void = () => {};
-	onConfirm?: () => void = () => {}
+	onConfirm?: (data?: any) => void = () => {}
 
 	waitForPopup() {
 		this.popupService.showPopupSubject.subscribe(properties => {
