@@ -35,7 +35,7 @@ export class TabView implements AfterContentInit, OnChanges {
 		//Gets list of tab components
 		const tabs = this.tabs.toArray()
 		//Generates list of tab titles
-		tabs.forEach(tab => this.tabTitles.push(tab.title));
+		tabs.forEach(tab => this.tabTitles.push(tab.tabTitle));
 
 		this.showTab(this.selectedTab);
 

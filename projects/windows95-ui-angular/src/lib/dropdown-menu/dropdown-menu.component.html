@@ -1,7 +1,7 @@
 <div class = "windows-dropdown relative">
 	<ng-container *ngIf = "menuItems[0]?.routerLink; else noRouterButton">
 		<windows-button
-			styleClass = "toolbar-button"
+			[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
 			[routerLink] = "menuItems[0].routerLink"
 			[queryParams]="menuItems[0]?.queryParams"
 		>
@@ -10,7 +10,7 @@
 	</ng-container>
 	<ng-template #noRouterButton>
 		<a [attr.href] = "menuItems[0]?.href ? menuItems[0].href : null" (click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
-			<windows-button styleClass = "toolbar-button">{{menuItems[0].text}}</windows-button>
+			<windows-button [styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''">{{menuItems[0].text}}</windows-button>
 		</a>
 	</ng-template>
 	<ul class = "absolute">

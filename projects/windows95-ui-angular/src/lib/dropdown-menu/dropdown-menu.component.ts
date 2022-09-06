@@ -9,6 +9,7 @@ import { Params } from "@angular/router";
 export class DropdownMenu {
 
 	@Input() menuItems: MenuItem[] = [];
+	@Input() isToolbarDropdown = true;
 
 }
 
