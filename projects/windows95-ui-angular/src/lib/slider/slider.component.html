@@ -4,7 +4,8 @@
 	[class.disabled] ="disabled"
 	[ngStyle] = "{
 		'width': !vertical ? length : null,
-		'height': vertical ? length : null
+		'height': vertical ? length : null,
+		'margin-bottom': incrementBy > 0 ? '1.5rem' : null
 	}"
 	#slider
 	(mousedown) = "onDragStart($event)"

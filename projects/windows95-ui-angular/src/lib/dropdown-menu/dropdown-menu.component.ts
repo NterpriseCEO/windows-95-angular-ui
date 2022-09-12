@@ -2,7 +2,7 @@ import { Component, Input } from "@angular/core";
 import { Params } from "@angular/router";
 
 @Component({
-	selector: "dropdowm-menu",
+	selector: "dropdown-menu",
 	templateUrl: "dropdown-menu.component.html",
 	styleUrls: ["dropdown-menu.component.scss"]
 })

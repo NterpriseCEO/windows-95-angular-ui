@@ -272,6 +272,29 @@ td {
 
 a.unstyled { all: unset; }
 
+.white-space-normal {
+	white-space: normal;
+}
+.white-space-nowrap {
+	white-space: nowrap;
+}
+.white-space-pre {
+	white-space: pre;
+}
+.white-space-pre-line {
+	white-space: pre-line;
+}
+.white-space-pre-wrap {
+	white-space: pre-wrap;
+}
+
+.text-overflow-clip {
+	text-overflow: clip;
+}
+.text-overflow-ellipsis {
+	text-overflow: ellipsis;
+}
+
 ///////Positioning classes////////////////////////////////////////////
 .absolute { position: absolute; }
 .relative { position: relative; }
