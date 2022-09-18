@@ -3,10 +3,12 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { DropdownMenu } from "./dropdown-menu.component";
 import { ButtonModule } from "../button/button.module";
+import { ScrollDirective, ScrollService } from "./scroll.directive"; 
 
 @NgModule({
 	declarations: [
-		DropdownMenu
+		DropdownMenu,
+		ScrollDirective
 	],
 	imports: [
 		BrowserModule,
@@ -14,7 +16,8 @@ import { ButtonModule } from "../button/button.module";
 		ButtonModule
 	],
 	exports: [
-		DropdownMenu
+		DropdownMenu,
+		ScrollDirective
 	]
 })
 export class DropdownMenuModule { }

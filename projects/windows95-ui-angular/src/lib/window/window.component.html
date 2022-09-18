@@ -2,7 +2,7 @@
 	<div class = "header flex-none" [attr.data-active] = "active">
 		<div>
 			<button *ngFor = "let button of headerButtons" (click) = "button.action()">{{button.text}}</button>
-			<span class = "bold-font title">{{title}}</span>
+			<span class = "bold-font title">{{windowTitle}}</span>
 		</div>
 		<button *ngIf = "showCloseButton" (click) = "onClose.emit(null)"><span class="close-icon"></span></button>
 	</div>

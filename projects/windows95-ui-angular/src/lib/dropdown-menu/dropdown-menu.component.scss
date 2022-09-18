@@ -2,7 +2,7 @@
 	display: inline-block;
 
 	&:hover ul {
-		display: block;
+		opacity: 1;
 	}
 }
 
@@ -14,7 +14,8 @@ a {
 
 ul {
 	position: absolute;
-	display: none;
+	top: 0;
+	left: 0;
 	box-sizing: border-box;
 	min-width: max-content;
 	margin: 0;
@@ -26,10 +27,28 @@ ul {
 	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
 	box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
 	z-index: 900;
+	opacity: 0;
+	pointer-events: none;
+
+	&.show-dropdown {
+		opacity: 1;
+		pointer-events: all;
+
+		& li {
+			pointer-events: auto;
+		}
+	}
 
 	& a {
 		padding: 8px;
 	}
+}
+
+*[data-disabled="true"] {
+	pointer-events: none;
+	background: rgb(198, 198, 198) !important;
+	color: rgb(132, 133, 132) !important;
+	text-shadow: rgb(254 254 254) 1px 1px;
 }
 
 ul,
@@ -53,7 +72,7 @@ li {
 	white-space: nowrap;
 	line-height: 28px;
 	color: rgb(10, 10, 10);
-	pointer-events: auto;
+	pointer-events: none;
 
 	&.main-action {
 		font-weight: bold;

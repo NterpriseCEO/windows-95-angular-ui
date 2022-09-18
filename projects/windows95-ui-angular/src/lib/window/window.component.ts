@@ -9,7 +9,7 @@ export class WindowComponent {
 
 	@Input() styleClass: string = "";
 	@Input() inlineStyles: any = "";
-	@Input() title: string = "";
+	@Input() windowTitle: string = "";
 	@Input() active: boolean = true;
 	@Input() showCloseButton: boolean = true;
 	@Input() headerButtons: any[] = [];

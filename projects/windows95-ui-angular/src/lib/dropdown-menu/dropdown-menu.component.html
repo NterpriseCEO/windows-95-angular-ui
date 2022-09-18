@@ -1,25 +1,61 @@
-<div class = "windows-dropdown relative">
-	<ng-container *ngIf = "menuItems[0]?.routerLink; else noRouterButton">
-		<windows-button
-			[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
-			[routerLink] = "menuItems[0].routerLink"
-			[queryParams]="menuItems[0]?.queryParams"
-		>
-			{{menuItems[0].text}}
-		</windows-button>
+<div
+	#menuWrapper
+	class = "windows-dropdown relative"
+	(mouseenter) = "hovering = true"
+	(mouseleave) = "checkIfHovering()"
+>
+	<ng-container *ngIf = "menuItems[0]?.routerLink !== ''">
+		<span>
+			<windows-button
+				[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
+				[routerLink] = "menuItems[0].routerLink"
+				[queryParams]="menuItems[0]?.queryParams"
+				[disabled] = "menuItems[0]?.disabled || false"
+			>
+				{{menuItems[0].text}}
+			</windows-button>
+		</span>
 	</ng-container>
-	<ng-template #noRouterButton>
-		<a [attr.href] = "menuItems[0]?.href ? menuItems[0].href : null" (click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null">
-			<windows-button [styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''">{{menuItems[0].text}}</windows-button>
+	<ng-container *ngIf = "menuItems[0]?.routerLink === ''">
+		<a
+			[attr.href] = "menuItems[0]?.href ? menuItems[0].href : null"
+			(click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null"
+		>
+			<windows-button
+				[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
+				[disabled] = "menuItems[0]?.disabled || false"
+			>
+				{{menuItems[0].text}}
+			</windows-button>
 		</a>
-	</ng-template>
-	<ul class = "absolute">
-		<li *ngFor = "let item of menuItems.slice(1); let i = index">
+	</ng-container>
+	<ul
+		#dropdownMenu
+		class = "absolute"
+		[class.show-dropdown] = "hovering"
+		(mouseenter) = "hoveringDropdownItems = true"
+		(mouseleave) = "hoveringDropdownItems = false; hovering = false"
+	>
+		<li
+			*ngFor = "let item of menuItems.slice(1); let i = index"
+		>
 			<ng-container *ngIf = "item?.routerLink; else noRouter">
-				<a [routerLink] = "item.routerLink" [queryParams]="item?.queryParams">{{item.text}}</a>
+				<a
+					[routerLink] = "item.routerLink"
+					[queryParams] = "item?.queryParams"
+					[attr.data-disabled] = "item?.disabled"
+				>
+					{{item.text}}
+				</a>
 			</ng-container>
 			<ng-template #noRouter>
-				<a [attr.href] = "item?.href ? item.href : null" (click) = "item?.onClick ? item?.onClick() : null"> {{item.text}}</a>
+				<a
+					[attr.href] = "item?.href ? item.href : null"
+					(click) = "item?.onClick ? item?.onClick() : null"
+					[attr.data-disabled] = "item?.disabled"
+				>
+					{{item.text}}
+				</a>
 			</ng-template>
 		</li>
 	</ul>

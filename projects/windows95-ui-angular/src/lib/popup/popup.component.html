@@ -1,5 +1,5 @@
 <div *ngIf = "visible">
-	<window [title] = "title" (onClose) = "rejectPopup()">
+	<window [windowTitle] = "title" (onClose) = "rejectPopup()">
 		<div class = "popup-content flex flex-column h-full">
 			<div class = "overflow-auto flex-grow-1">
 				<ng-container *ngIf = "isText(contents)">{{contents}}</ng-container>
