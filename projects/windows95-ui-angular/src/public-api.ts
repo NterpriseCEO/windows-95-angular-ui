@@ -18,3 +18,4 @@ export * from "./lib/slider/public-api";
 export * from "./lib/popup/public-api";
 export * from "./lib/file-input/public-api";
 export * from "./lib/password-input/public-api";
+export * from "./lib/tooltip/public-api";

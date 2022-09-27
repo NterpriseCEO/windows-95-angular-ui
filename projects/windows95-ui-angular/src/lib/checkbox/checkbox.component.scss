@@ -4,7 +4,6 @@ label {
 	margin: 8px 0px;
 	color: rgb(10, 10, 10);
 	font-size: 1rem;
-	cursor: pointer;
 	user-select: none;
 	-webkit-box-align: center;
 	align-items: center;
@@ -14,7 +13,6 @@ label.disabled {
 	color: rgb(132, 133, 132);
 	-webkit-text-fill-color: rgb(132, 133, 132);
 	text-shadow: rgb(254 254 254) 1px 1px;
-	cursor: auto;
 }
 
 input {
@@ -52,7 +50,7 @@ input {
 	&:focus ~ .checkbox-text {
 		outline: rgb(10, 10, 10) dotted 2px;
 	}
-	&:disabled ~ .checkbox-text {
+	&:disabled ~ .checkbox {
 		background: rgb(198, 198, 198);
 	}
 }

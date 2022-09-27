@@ -1,4 +1,5 @@
 import { AfterContentInit, Component, QueryList, ContentChildren, ChangeDetectorRef, Input, OnChanges, SimpleChanges } from "@angular/core";
+import { Router } from "@angular/router";
 import { of, skipWhile } from "rxjs";
 import { Tab } from "../tab/tab.component";
 
@@ -12,17 +13,19 @@ export class TabView implements AfterContentInit, OnChanges {
 	@ContentChildren(Tab) tabs!: QueryList<Tab>;
 
 	@Input() selectedTab: number = 0;
+	@Input() treatTabsAsPages: boolean = false;
 
 	tabTitles: string[] = [];
 
 	activeTab = 0;
-	
 
-	constructor(private ref: ChangeDetectorRef) {}
+	constructor(
+		private ref: ChangeDetectorRef,
+		private router: Router
+	) {}
 
 	ngOnChanges(changes: SimpleChanges) {
 		if(changes["selectedTab"]?.currentValue !== changes["selectedTab"]?.previousValue) {
-			
 			of(this.tabs).pipe(
 				skipWhile((tabs) => tabs === undefined),
 			).subscribe(() => {
@@ -48,9 +51,13 @@ export class TabView implements AfterContentInit, OnChanges {
 		//Sets all tabs to inactive
 		let tabs = this.tabs.toArray();
 		tabs[this.activeTab].active = false;
-		
+
 		//Sets the selected tab to active
 		this.activeTab = index;
+		//Changes the query parameter to the selected tab on tab change
+		if(this.treatTabsAsPages) {
+			this.router.navigate([this.router.url.split("?")[0].split("/")[1]], { queryParams: { tab: index } });
+		}
 		tabs[this.activeTab].active = true;
 	}
 }

@@ -123,7 +123,7 @@ th {
 	font-weight: normal;
     color: rgb(10, 10, 10);
     vertical-align: inherit;
-    cursor: default;
+    cursor: url("./cursors/arrow.cur"), auto;
     user-select: none;
 }
 th::before {
@@ -172,6 +172,30 @@ td {
 	padding: 0px 8px;
 }
 
+//////////Tooltip///////////
+.tooltip {
+	position: absolute;
+    display: none;
+    top: -4px;
+    left: 50%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 4px;
+    background: rgb(254, 251, 204);
+    border: 2px solid rgb(10, 10, 10);
+    box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px;
+    transform: translate(-50%, -100%);
+	z-index: 100000;
+}
+
+///////////////////////////
+a {
+	cursor: url("./cursors/pointer.cur"), default;
+}
+input {
+	cursor: text;
+}
+
 //Overflow proeprties
 .overflow-scroll { overflow: scroll; }
 .overflow-auto { overflow: auto; }
@@ -192,6 +216,10 @@ td {
 @font-face {
 	font-family: ms-sans-serif-bold;
 	src: url('ms-sans-serif-bold.woff2') format('woff2');
+}
+
+* {
+	cursor: url("./cursors/arrow.cur"), auto;
 }
 
 *:not(.bold-font) { font-family: ms-sans-serif; }
@@ -608,38 +636,31 @@ a.unstyled { all: unset; }
 
 ///////Cursor classes/////////
 .cursor-alias { cursor: alias; }
-.cursor-all-scroll { cursor: all-scroll; }
+.cursor-all-scroll, .cursor-move { cursor: url("./cursors/four-way-arrows.cur"), auto; }
 .cursor-auto { cursor: auto; }
-.cursor-default { cursor: default; }
+.cursor-default { cursor: url("./cursors/arrow.cur"), auto; }
 .cursor-cell { cursor: cell; }
 .cursor-context-menu { cursor: context-menu; }
 .cursor-col-resize { cursor: col-resize; }
 .cursor-copy { cursor: copy; }
-.cursor-crosshair { cursor: crosshair; }
-.e-resize { cursor: e-resize; }
-.cursor-ew-resize { cursor: ew-resize; }
+
+.cursor-crosshair { cursor: url("./cursors/beam.cur"), auto; }
+
+.cursor-e-resize, .cursor-ew-resize { cursor: url("./cursors/horizontal-resize.cur"), auto; }
 .cursor-grab { cursor: grab; }
 .cursor-grabbing { cursor: grabbing; }
-.cursor-help { cursor: help; }
-.cursor-move { cursor: move; }
-.cursor-n-resize { cursor: n-resize; }
-.cursor-ne-resize { cursor: ne-resize; }
-.cursor-nesw-resize { cursor: nesw-resize; }
-.cursor-ns-resize { cursor: ns-resize; }
-.cursor-nw-resize { cursor: nw-resize; }
-.cursor-nwse-resize { cursor: nwse-resize; }
-.cursor-no-drop { cursor: no-drop; }
+.cursor-help { cursor: url("./cursors/help_win95.cur"), auto; }
+.cursor-n-resize, .cursor-ns-resize, .cursor-s-resize { cursor: url("./cursors/vertical-resize.cur"), auto; }
+.cursor-ne-resize, .cursor-nesw-resize, .cursor-sw-resize { cursor: url("./cursors/left-diagonal-resize.cur"), auto; }
+.cursor-nw-resize, .cursor-nwse-resize, .cursor-se-resize { cursor: url("./cursors/right-diagonal-resize.cur"), auto; }
+.cursor-no-drop, .cursor-not-allowed { cursor: url("./cursors/not-allowed.cur"), auto; }
 .cursor-none { cursor: none; }
-.cursor-not-allowed { cursor: not-allowed; }
-.cursor-pointer { cursor: pointer; }
-.cursor-progress { cursor: progress; }
+.cursor-pointer { cursor: url("./cursors/pointer.cur"), auto; }
+.cursor-progress, .cursor-wait { cursor: url("./cursors/wait.cur"), auto; }
 .cursor-row-resize { cursor: row-resize; }
-.cursor-s-resize { cursor: s-resize; }
-.cursor-se-resize { cursor: se-resize; }
-.cursor-sw-resize { cursor: sw-resize; }
-.cursor-text { cursor: text; }
+.cursor-text { cursor: url("./cursors/text.cur"), auto; }
 .w-resize { cursor: w-resize; }
-.cursor-wait { cursor: wait; }
+.cursor-cd { cursor: url("./cursors/cd.cur"), auto; }
 .cursor-zoom-in { cursor: zoom-in; }
 .cursor-zoom-out { cursor: zoom-out; }
 .cursor-vertical-text { cursor: vertical-text; }
