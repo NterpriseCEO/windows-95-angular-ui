@@ -4,7 +4,7 @@
 	(mouseenter) = "hovering = true"
 	(mouseleave) = "checkIfHovering()"
 >
-	<ng-container *ngIf = "menuItems[0]?.routerLink !== ''">
+	<ng-container *ngIf = "menuItems[0]?.routerLink">
 		<span>
 			<windows-button
 				[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
@@ -16,7 +16,7 @@
 			</windows-button>
 		</span>
 	</ng-container>
-	<ng-container *ngIf = "menuItems[0]?.routerLink === ''">
+	<ng-container *ngIf = "!menuItems[0]?.routerLink">
 		<a
 			[attr.href] = "menuItems[0]?.href ? menuItems[0].href : null"
 			(click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null"
@@ -32,7 +32,7 @@
 	<ul
 		#dropdownMenu
 		class = "absolute"
-		[class.show-dropdown] = "hovering"
+		[class.show-dropdown] = "hovering && !navigating"
 		(mouseenter) = "hoveringDropdownItems = true"
 		(mouseleave) = "hoveringDropdownItems = false; hovering = false"
 	>
@@ -41,8 +41,7 @@
 		>
 			<ng-container *ngIf = "item?.routerLink; else noRouter">
 				<a
-					[routerLink] = "item.routerLink"
-					[queryParams] = "item?.queryParams"
+					(click) = "routerNavigate(item.routerLink || '', item?.queryParams || {})"
 					[attr.data-disabled] = "item?.disabled"
 				>
 					{{item.text}}

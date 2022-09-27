@@ -33,7 +33,6 @@ button {
 	align-items: center;
 	-webkit-box-pack: center;
 	justify-content: center;
-	cursor: default;
 	user-select: none;
 
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -52,7 +51,7 @@ button {
 
 	&:before {
 		position: absolute;
-		bottom: -4px;
+		bottom: -3px;
 		left: 2px;
 		width: calc(100% - 4px);
 		height: 6px;

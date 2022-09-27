@@ -11,9 +11,8 @@ export class ScrollDirective {
 
 		const element = this.eleRef.nativeElement;
 
+		//This assists the dropdown menu in realigning itself when the window is scrolled
 		element.addEventListener('scroll', () => {
-			console.log("hellooooooooooooo");
-			
 			this.scrollService.scrollSubject.next(null);
 		});
 	}

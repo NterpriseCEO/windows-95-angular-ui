@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, Input, ViewChild } from "@angular/core";
-import { Params } from "@angular/router";
+import { Params, Router } from "@angular/router";
 import { ScrollService } from "./scroll.directive";
 
 @Component({
@@ -21,13 +21,34 @@ export class DropdownMenu implements AfterViewInit{
 
 	hovering:boolean = false;
 	hoveringDropdownItems: boolean = false;
-	
-	constructor(private scrollService: ScrollService) {
+	navigating: boolean = false;
+
+	constructor(
+		private scrollService: ScrollService,
+		private router: Router,
+	) {
 		scrollService.scrollSubject.subscribe(() => {
 			this.realignMenu();
 		});
 	}
 
+	routerNavigate(routerLink: string, queryParams: object) {
+		this.hoveringDropdownItems = false;
+
+		let params: any = undefined;
+
+		if(queryParams) {
+			params = queryParams;
+		}
+
+		this.navigating = true;
+
+		//Basically navigates after menu is hidden
+		//This prevents the menu from persisting on the page
+		setTimeout(() => {
+			this.router.navigate([routerLink], { queryParams: params });
+		}, 1);
+	}
 
 	ngAfterViewInit() {
 		this.menu = this.dropdownMenu.nativeElement;
@@ -48,6 +69,8 @@ export class DropdownMenu implements AfterViewInit{
 	}
 
 	realignMenu() {
+		//Checks if the menu is is visible on screen and
+		//realigns the menu to fit within the viewport
 		if(this.isInViewport()) {
 			let fbr = this.wrapper.getBoundingClientRect();
 			let mbr = this.menu.getBoundingClientRect();
@@ -57,10 +80,14 @@ export class DropdownMenu implements AfterViewInit{
 			fbr = this.wrapper.getBoundingClientRect();
 			mbr = this.menu.getBoundingClientRect();
 
+			//Checks if the menu is overflowing the right side of the screen
 			if(mbr.left+mbr.width > window.innerWidth) {
+				//Moves the menu to the left
 				this.menu.style.left = (window.innerWidth - mbr.width) + "px";
 			}
+			//Checks if the menu is overflowing the bottom of the screen
 			if(mbr.top+mbr.height > window.innerHeight) {
+				//Moves the menu up
 				this.menu.style.top = (fbr.top - mbr.height) + "px";
 			}
 		}
