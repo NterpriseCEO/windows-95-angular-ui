@@ -4,13 +4,13 @@ fieldset {
     padding: 16px;
     font-size: 1rem;
     color: rgb(10, 10, 10);
-    border: 2px solid rgb(254, 254, 254);
-    box-shadow: rgb(132 133 132) -1px -1px 0px 1px, rgb(132 133 132) -1px -1px 0px 1px inset;
+    border: 2px solid var(--border_color_7);
+    box-shadow: var(--box_shadow_3);
 
 	&:disabled, &:disabled * {
-		-webkit-text-fill-color: rgb(132, 133, 132);
-		color: rgb(132, 133, 132);
-		text-shadow: rgb(254 254 254) 1px 1px;
+		-webkit-text-fill-color: var(--color_disabled);
+		color: var(--color_disabled);
+		text-shadow: var(--text_shadow);
 	}
 }
 
@@ -21,6 +21,6 @@ legend {
     left: 8px;
     padding: 0px 8px;
     font-size: 1rem;
-    background: rgb(198, 198, 198);
+    background: var(--background_color_primary);
     transform: translateY(calc(-50% - 2px));
 }

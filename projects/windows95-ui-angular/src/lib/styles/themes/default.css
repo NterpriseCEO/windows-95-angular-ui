@@ -1,0 +1,76 @@
+:root {
+	/*button*/
+	--color_primary: rgb(10, 10, 10);
+	/*disabled button*/
+	--color_disabled: rgb(132, 133, 132);
+	/*disabled button*/
+	--text_shadow: rgb(254 254 254) 1px 1px;
+	/*window button before*/
+	--border_color_1: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
+	/*window button active before*/
+	--border_color_2: rgb(10, 10, 10) rgb(254, 254, 254) rgb(254, 254, 254) rgb(10, 10, 10);
+	/*window button focus after*/
+	--outline_dotted: rgb(10, 10, 10) dotted 2px;
+	/*group box*/
+	--box_shadow_3: rgb(132, 133, 132) -1px -1px 0px 1px, rgb(132, 133, 132) -1px -1px 0px 1px inset;
+	/*group box*/
+	--border_color_7: rgb(254, 254, 254);
+	/*br horizontal ------ (menu list)*/
+	--border_color_8: rgb(132, 133, 132);
+	/*number input wrapper before*/
+	--border_color_5: rgb(10, 10, 10) rgb(223, 223, 223) rgb(223, 223, 223) rgb(10, 10, 10);
+	/*number input button before*/
+	--box_shadow_5: rgb(254, 254, 254) 1px 1px 0px 1px inset, rgb(132, 133, 132) -1px -1px 0px 1px inset;
+	/*slider disabled vertical tick*/
+	--border_disabled_color: rgb(132, 133, 132);
+	/*slider disabled tick*/
+	--box_shadow_7: rgb(254, 254, 254) 1px 1px 0px;
+	/*slider vertical tick*/
+	--outline: rgb(10, 10, 10) solid 2px;
+	/*tbody tr:hover*/
+	--color_secondary: rgb(254, 254, 254);
+	/*tbody*/
+	--background_color_secondary: rgb(255, 255, 255);
+	/*th before*/
+	--border_color_4: rgb(10, 10, 10);
+	/*th active before*/
+	--border_color_9: rgb(223, 223, 223);
+	/*th before*/
+	--box_shadow: rgb(223, 223, 223) 1px 1px 0px 1px inset, rgb(132, 133, 132) -1px -1px 0px 1px inset;
+	/*th active before*/
+	--box_shadow_1: rgb(132, 133, 132) 1px 1px 0px 1px inset, rgb(254, 254, 254) -1px -1px 0px 1px inset;
+	/*tbody*/
+	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset;
+	/*tr hover*/
+	--background_color_hover: rgb(6, 0, 132);
+	/*tabview button*/
+	--border_color_10: rgb(254, 254, 254) rgb(10, 10, 10) transparent rgb(254, 254, 254);
+	/*password input*/
+	--caret_color: black;
+	/*toolip*/
+	--tooltip_background_color: rgb(254, 251, 204);
+	/*tooltip*/
+	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px;
+	/*window header color*/
+	--window_header_color: rgb(254, 254, 254);
+	/*window header background color*/
+	--window_header_background_color: rgb(6, 0, 132);
+	/*blurred window*/
+	--window_header_blurred_color: rgb(198, 198, 198);
+	/*blurred window header*/
+	--window_header_blurred_background_color: rgb(127, 120, 127);
+	/*window*/
+	--border_color_6: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+	/*window*/
+	--box_shadow_2: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254, 254, 254) 1px 1px 0px 1px inset, rgb(132, 133, 132) -1px -1px 0px 1px inset;
+	/*toolbar button not disabled - hover / focus (found in window)*/
+	--border_color_3: rgb(254, 254, 254) rgb(132, 133, 132) rgb(132, 133, 132) rgb(254, 254, 254);
+	/*panel*/
+	--box_shadow_6: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254, 254, 254) 1px 1px 0px 1px inset, rgb(132, 133, 132) -1px -1px 0px 1px inset;
+	/*avatar*/
+	--background_color_primary: rgb(198, 198, 198);
+	/*avatar*/
+	--border_color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	/*file input label focus after*/
+	--outline_color: rgb(10, 10, 10);
+}

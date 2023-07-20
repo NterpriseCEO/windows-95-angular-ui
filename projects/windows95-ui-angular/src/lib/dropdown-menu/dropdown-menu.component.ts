@@ -7,7 +7,7 @@ import { ScrollService } from "./scroll.directive";
 	templateUrl: "dropdown-menu.component.html",
 	styleUrls: ["dropdown-menu.component.scss"]
 })
-export class DropdownMenu implements AfterViewInit{
+export class DropdownMenu implements AfterViewInit {
 
 	@Input() menuItems: MenuItem[] = [];
 	@Input() isToolbarDropdown = true;
@@ -19,7 +19,7 @@ export class DropdownMenu implements AfterViewInit{
 	menu: any;
 	wrapper: any;
 
-	hovering:boolean = false;
+	hovering: boolean = false;
 	hoveringDropdownItems: boolean = false;
 	navigating: boolean = false;
 
@@ -37,7 +37,7 @@ export class DropdownMenu implements AfterViewInit{
 
 		let params: any = undefined;
 
-		if(queryParams) {
+		if (queryParams) {
 			params = queryParams;
 		}
 
@@ -46,23 +46,26 @@ export class DropdownMenu implements AfterViewInit{
 		//Basically navigates after menu is hidden
 		//This prevents the menu from persisting on the page
 		setTimeout(() => {
-			this.router.navigate([routerLink], { queryParams: params });
+			this.router.navigate([routerLink], { queryParams: params })
+				.then(() => {
+					this.navigating = false;
+				});
 		}, 1);
 	}
 
 	ngAfterViewInit() {
 		this.menu = this.dropdownMenu.nativeElement;
 		this.wrapper = this.menuWrapper.nativeElement;
-		
+
 		document.body.appendChild(this.menu);
 
 		this.realignMenu();
 	}
-	
+
 
 	checkIfHovering() {
 		setTimeout(() => {
-			if(!this.hoveringDropdownItems) {
+			if (!this.hoveringDropdownItems) {
 				this.hovering = false;
 			}
 		}, 1);
@@ -71,7 +74,7 @@ export class DropdownMenu implements AfterViewInit{
 	realignMenu() {
 		//Checks if the menu is is visible on screen and
 		//realigns the menu to fit within the viewport
-		if(this.isInViewport()) {
+		if (this.isInViewport()) {
 			let fbr = this.wrapper.getBoundingClientRect();
 			let mbr = this.menu.getBoundingClientRect();
 			this.menu.style.top = (fbr.top + fbr.height) + "px";
@@ -81,12 +84,12 @@ export class DropdownMenu implements AfterViewInit{
 			mbr = this.menu.getBoundingClientRect();
 
 			//Checks if the menu is overflowing the right side of the screen
-			if(mbr.left+mbr.width > window.innerWidth) {
+			if (mbr.left + mbr.width > window.innerWidth) {
 				//Moves the menu to the left
 				this.menu.style.left = (window.innerWidth - mbr.width) + "px";
 			}
 			//Checks if the menu is overflowing the bottom of the screen
-			if(mbr.top+mbr.height > window.innerHeight) {
+			if (mbr.top + mbr.height > window.innerHeight) {
 				//Moves the menu up
 				this.menu.style.top = (fbr.top - mbr.height) + "px";
 			}

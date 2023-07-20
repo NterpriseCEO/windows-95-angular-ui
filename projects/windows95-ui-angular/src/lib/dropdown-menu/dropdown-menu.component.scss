@@ -9,7 +9,7 @@
 a {
 	display: block;
 	text-decoration: none;
-	color: rgb(10, 10, 10);
+	color: var(--color_primary);
 }
 
 ul {
@@ -20,12 +20,12 @@ ul {
 	min-width: max-content;
 	margin: 0;
 	padding: 4px;
-	background: rgb(198, 198, 198);
-	color: rgb(10, 10, 10);
+	background: var(--background_color_primary);
+	color: var(--color_primary);
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
-	box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+	border-color: var(--border_color_6);
+	box-shadow: var(--box_shadow_2);
 	z-index: 900;
 	opacity: 0;
 	pointer-events: none;
@@ -46,9 +46,9 @@ ul {
 
 *[data-disabled="true"] {
 	pointer-events: none;
-	background: rgb(198, 198, 198) !important;
-	color: rgb(132, 133, 132) !important;
-	text-shadow: rgb(254 254 254) 1px 1px;
+	background: var(--background_color_primary) !important;
+	color: var(--color_disabled) !important;
+	text-shadow: var(--text_shadow);
 }
 
 ul,
@@ -71,7 +71,7 @@ li {
 	font-size: 1rem;
 	white-space: nowrap;
 	line-height: 28px;
-	color: rgb(10, 10, 10);
+	color: var(--color_primary);
 	pointer-events: none;
 
 	&.main-action {
@@ -83,14 +83,14 @@ li {
 	}
 
 	&:hover a {
-		background: rgb(6, 0, 132);
-		color: rgb(254, 254, 254);
+		background: var(--background_color_hover);
+		color: var(--color_secondary);
 	}
 }
 
 hr {
 	width: 100%;
 	margin: 0px;
-	border-bottom: 2px solid rgb(254, 254, 254);
-	border-top: 2px solid rgb(132, 133, 132);
+	border-bottom: 2px solid var(--border_color_7);
+	border-top: 2px solid var(--border_color_8);
 }

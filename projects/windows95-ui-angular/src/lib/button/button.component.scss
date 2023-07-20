@@ -10,9 +10,9 @@ button {
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
 	justify-content: center;
-	background: rgb(198, 198, 198);
-	color: rgb(10, 10, 10);
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background: var(--background_color_primary);
+	color: var(--color_primary);
+	-webkit-tap-highlight-color: var(--webkit_tap_highlight_color);
 	border: none;
 	user-select: none;
 	// font-family: inherit;
@@ -32,14 +32,14 @@ button {
 		box-sizing: border-box;
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
-		box-shadow: rgb(223 223 223) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+		border-color: var(--border_color_1);
+		box-shadow: var(--box_shadow);
 	}
 
 	&.windows-button-primary::after {
 		width: calc(100% - 4px);
 		height: calc(100% - 4px);
-		outline: rgb(10, 10, 10) solid 2px;
+		outline: var(--outline);
 	}
 
 	&::after {
@@ -47,13 +47,13 @@ button {
 	}
 
 	&:disabled {
-		color: rgb(132, 133, 132);
-		text-shadow: rgb(254 254 254) 1px 1px;
+		color: var(--color_disabled);
+		text-shadow: var(--text_shadow);
 	}
 
 	&:active:not(:disabled):not(.toolbar-button):before {
-		box-shadow: rgb(132 133 132) 1px 1px 0px 1px inset, rgb(223 223 223) -1px -1px 0px 1px inset;
-		border-color: rgb(10, 10, 10) rgb(254, 254, 254) rgb(254, 254, 254) rgb(10, 10, 10);
+		box-shadow: var(--box_shadow_1);
+		border-color: var(--border_color_2);
 	}
 
 	&:active:focus::after,
@@ -67,11 +67,11 @@ button {
 
 	&:focus:not(:disabled):not(.toolbar-button)::after,
 	&:active:not(:disabled):not(.toolbar-button)::after {
-		outline: rgb(10, 10, 10) dotted 2px;
+		outline: var(--outline_dotted);
 		outline-style: dotted;
 		outline-width: 2px;
 		outline-offset: -8px;
-		outline-color: rgb(10, 10, 10);
+		outline-color: var(--outline_color);
 	}
 
 	&.toolbar-button:not(:disabled) {
@@ -80,13 +80,13 @@ button {
 		&:hover, &:focus {
 			border-style: solid;
 			border-width: 2px;
-			border-color: rgb(254, 254, 254) rgb(132, 133, 132) rgb(132, 133, 132) rgb(254, 254, 254);
+			border-color: var(--border_color_3);
 		}
 
 		&:active {
 			border-style: solid;
 			border-width: 2px;
-			border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+			border-color: var(--border_color);
 		}
 	}
 }

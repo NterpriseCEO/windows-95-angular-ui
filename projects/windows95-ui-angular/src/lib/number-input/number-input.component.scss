@@ -12,14 +12,14 @@
 	font-size: 1rem;
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	border-color: var(--border_color);
 	line-height: 1.5;
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
 	width: 100%;
 	min-height: 36px;
-	background: rgb(255, 255, 255);
+	background: var(--background_color_secondary);
 
 	&::before {
 		position: absolute;
@@ -30,14 +30,14 @@
 		height: calc(100% - 4px);
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(10, 10, 10) rgb(223, 223, 223) rgb(223, 223, 223) rgb(10, 10, 10);
+		border-color: var(--border_color_5);
 		pointer-events: none;
-		box-shadow: rgb(0 0 0 / 20%) 2px 2px 3px inset;
+		box-shadow: var(--box_shadow_4);
 	}
 }
 
 .disabled .number-input-wrapper {
-	background: rgb(198, 198, 198);
+	background: var(--background_color_primary);
 }
 
 input {
@@ -51,14 +51,16 @@ input {
 	font-size: 1rem;
 	min-height: 27px;
 	font-family: inherit;
-	color: rgb(10, 10, 10);
+	color: var(--color_primary);
 	padding: 0px 8px;
 	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
 
 	&:disabled {
-		-webkit-text-fill-color: rgb(132, 133, 132);
-		color: rgb(132, 133, 132);
-		text-shadow: rgb(254 254 254) 1px 1px;
+		-webkit-text-fill-color: var(--color_disabled);
+		color: var(--color_disabled);
+		text-shadow: var(--text_shadow);
 	}
 
 	&::-webkit-outer-spin-button,
@@ -84,8 +86,8 @@ button {
 	height: 50%;
 
 	box-sizing: border-box;
-	background: rgb(198, 198, 198);
-	color: rgb(10, 10, 10);
+	background: var(--background_color_primary);
+	color: var(--color_primary);
 	border: none;
 	position: relative;
 	display: inline-flex;
@@ -98,9 +100,9 @@ button {
 	font-family: inherit;
 
 	&::before {
-		border-left-color: rgb(223, 223, 223);
-		border-top-color: rgb(223, 223, 223);
-		box-shadow: rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+		border-left-color: var(--border_color_9);
+		border-top-color: var(--border_color_9);
+		box-shadow: var(--box_shadow_5);
 		box-sizing: border-box;
 		content: "";
 		position: absolute;
@@ -110,12 +112,12 @@ button {
 		height: 100%;
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
+		border-color: var(--border_color_1);
 	}
 
 	&:not(:disabled):active::before {
-		border-color: rgb(10, 10, 10) rgb(254, 254, 254) rgb(254, 254, 254) rgb(10, 10, 10);
-		box-shadow: rgb(132 133 132) 1px 1px 0px 1px inset, rgb(223 223 223) -1px -1px 0px 1px inset;
+		border-color: var(--border_color_2);
+		box-shadow: var(--box_shadow_1);
 	}
 
 	&::after {
@@ -131,14 +133,14 @@ button {
 	&:active:not(:disabled):focus::after,
 	&:not(:disabled):active::after {
 		top: 1px;
-		outline: rgb(10, 10, 10) dotted 2px;
+		outline: var(--outline_dotted);
 		outline-offset: -8px;
 	}
 
 	&:disabled {
-		-webkit-text-fill-color: rgb(132, 133, 132);
-		color: rgb(132, 133, 132);
-		text-shadow: rgb(254 254 254) 1px 1px;
+		-webkit-text-fill-color: var(--color_disabled);
+		color: var(--color_disabled);
+		text-shadow: var(--text_shadow);
 	}
 }
 
@@ -154,22 +156,22 @@ button {
 
 .button-increment {
 	& span {
-		border-bottom: 4px solid rgb(10, 10, 10)
+		border-bottom: 4px solid var(--border_color_4);
 	}
 
 	&:disabled span {
 		filter: drop-shadow(rgb(254, 254, 254) 1px 1px 0px);
-		border-bottom-color: rgb(132, 133, 132);
+		border-bottom-color: var(--border_color_8);
 	}
 }
 
 .button-decrement {
 	& span {
-		border-top: 4px solid rgb(10, 10, 10)
+		border-top: 4px solid var(--border_color_4);
 	}
 
 	&:disabled span {
 		filter: drop-shadow(rgb(254, 254, 254) 1px 1px 0px);
-		border-top-color: rgb(132, 133, 132);
+		border-top-color: var(--border_color_8);
 	}
 }

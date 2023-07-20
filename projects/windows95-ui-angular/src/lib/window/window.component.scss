@@ -6,13 +6,13 @@
 	min-width: 400px;
     min-height: 200px;
     padding: 4px;
-	background: rgb(198, 198, 198);
-	color: rgb(10, 10, 10);
+	background: var(--background_color_primary);
+	color: var(--color_primary);
     font-size: 1rem;
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
-	box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+	border-color: var(--border_color_6);
+	box-shadow: var(--box_shadow_2);
 }
 
 .header {
@@ -21,7 +21,7 @@
     padding-left: 0.25rem;
     padding-right: 3px;
     font-weight: bold;
-    border: 2px solid rgb(198, 198, 198);
+    border: 2px solid var(--background_color_primary);
     line-height: 33px;
     -webkit-box-align: center;
     align-items: center;
@@ -29,13 +29,13 @@
     justify-content: space-between;
 
 	&[data-active="true"] {
-		background: rgb(6, 0, 132);
-		color: rgb(254, 254, 254);
+		background: var(--window_header_background_color);
+		color: var(--window_header_color);
 	}
 
 	&[data-active="false"] {
-		background: rgb(127, 120, 127);
-		color: rgb(198, 198, 198);
+		background: var(--window_header_blurred_background_color);
+		color: var(--window_header_blurred_color);
 	}
 
 	// & > span {
@@ -58,11 +58,11 @@ button {
 	width: 31px;
 	padding-left: 0px;
 	padding-right: 0px;
-	background: rgb(198, 198, 198);
+	background: var(--background_color_primary);
 	font-size: 1rem;
 	font-family: inherit;
 	line-height: 27px;
-	color: rgb(10, 10, 10);
+	color: var(--color_primary);
 	border: none;
 	-webkit-box-align: center;
 	align-items: center;
@@ -83,8 +83,8 @@ button {
 		box-sizing: border-box;
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
-		box-shadow: rgb(223 223 223) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+		border-color: var(--border_color_1);
+		box-shadow: var(--box_shadow);
 	}
 
 	&:after {
@@ -98,8 +98,8 @@ button {
 	&:active:before {
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(10, 10, 10) rgb(254, 254, 254) rgb(254, 254, 254) rgb(10, 10, 10);
-		box-shadow: rgb(132 133 132) 1px 1px 0px 1px inset, rgb(223 223 223) -1px -1px 0px 1px inset;
+		border-color: var(--border_color_2);
+		box-shadow: var(--box_shadow_1);
 	}
 
 	&:active:focus::after, &:active::after {
@@ -107,7 +107,7 @@ button {
 	}
 
 	&:focus::after, &:active::after {
-		outline: rgb(10, 10, 10) dotted 2px;
+		outline: var(--outline_dotted);
 		outline-offset: -8px;
 	}
 
@@ -130,7 +130,7 @@ button {
 		&::before, &::after {
 			content: "";
 			position: absolute;
-			background: rgb(10, 10, 10);
+			background: var(--color_primary);
 		}
 
 		&::after {

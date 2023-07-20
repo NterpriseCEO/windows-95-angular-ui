@@ -5,12 +5,12 @@
 	overflow: hidden;
 	height: 50px;
 	width: 50px;
-	background: rgb(198, 198, 198);
+	background: var(--background_color_primary);
 	border-width: 2px;
 	font-weight: bold;
 	border-style: solid;
 	font-size: 1rem;
-	border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	border-color: var(--border_color);
 	border-radius: 0px;
 	-webkit-box-align: center;
 	align-items: center;

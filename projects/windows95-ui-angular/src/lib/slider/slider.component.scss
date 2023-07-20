@@ -10,7 +10,7 @@
 	}
 
 	&:active::before {
-		outline: rgb(7, 6, 8) dotted 2px;
+		outline: var(--outline_dotted);
 	}
 
 	& .line {
@@ -20,7 +20,7 @@
 		font-size: 1rem;
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+		border-color: var(--border_color);
 		line-height: 1.5;
 
 		
@@ -33,7 +33,7 @@
 			height: calc(100% - 4px);
 			border-style: solid;
 			border-width: 2px;
-			border-color: rgb(10, 10, 10) rgb(223, 223, 223) rgb(223, 223, 223) rgb(10, 10, 10);
+			border-color: var(--border_color_5);
 		}
 	}
 
@@ -41,12 +41,12 @@
 		position: relative;
 		display: inline-block;
 		box-sizing: border-box;
-		background: rgb(198, 198, 198);
-		color: rgb(10, 10, 10);
+		background: var(--background_color_primary);
+		color: var(--color_primary);
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(254, 254, 254) rgb(10, 10, 10) rgb(10, 10, 10) rgb(254, 254, 254);
-		box-shadow: rgb(223 223 223) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+		border-color: var(--border_color_1);
+		box-shadow: var(--box_shadow);
 	}
 
 	& .tick-list {
@@ -54,7 +54,7 @@
 		display: flex;
 		& .tick {
 			position: relative;
-			color: rgb(10, 10, 10);
+			color: var(--color_primary);
 
 			& span {
 				position: absolute;
@@ -101,7 +101,7 @@
 			& .tick {
 				display: inline-block;
 				width: 6px;
-				border-bottom: 2px solid rgb(10, 10, 10);
+				border-bottom: var(--outline);
 				transform: translateY(1px);
 
 				& span {
@@ -152,8 +152,8 @@
 
 			& .tick {
 				height: 100%;
-				border-left: 1px solid rgb(10, 10, 10);
-				border-right: 1px solid rgb(10, 10, 10);
+				border-left: 1px solid var(--border_color_4);
+				border-right: 1px solid var(--border_color_4);
 
 				& span {
 					transform: translate(-0.5ch, calc(100% + 2px));
@@ -172,27 +172,27 @@
 	}
 
 	& .slider-handle {
-		background: linear-gradient(45deg, rgb(198, 198, 198) 25%, transparent 25%, transparent 75%, rgb(198, 198, 198) 75%) 0px 0px / 4px 4px, linear-gradient(45deg, rgb(198, 198, 198) 25%, transparent 25%, transparent 75%, rgb(198, 198, 198) 75%) 2px 2px rgb(254, 254, 254);
+		background: linear-gradient(45deg, var(--background_color_primary) 25%, transparent 25%, transparent 75%, var(--background_color_primary) 75%) 0px 0px / 4px 4px, linear-gradient(45deg, var(--background_color_primary) 25%, transparent 25%, transparent 75%, var(--background_color_primary) 75%) 2px 2px var(--background_color_secondary);
 		background-position: 0px 0px, 2px 2px;
 		background-size: 4px 4px;
 	}
 
 	& .tick {
-		color: rgb(132, 133, 132);
-		-webkit-text-fill-color: rgb(132, 133, 132);
-		text-shadow: rgb(254 254 254) 1px 1px;
-		box-shadow: rgb(254 254 254) 1px 1px 0px;
+		color: var(--color_disabled);
+		-webkit-text-fill-color: var(--color_disabled);
+		text-shadow: var(--text_shadow);
+		box-shadow: var(--box_shadow_7);
 	}
 
 	&.vertical .tick {
-		border-top: 1px solid rgb(132, 133, 132) !important;	
-		border-bottom: 1px solid rgb(132, 133, 132) !important;
+		border-top: 1px solid var(--border_disabled_color) !important;
+		border-bottom: 1px solid var(--border_disabled_color) !important;
 	}
 
 	&:not(.vertical) .tick {
-		border-left: 1px solid rgb(132, 133, 132) !important;	
-		border-right: 1px solid rgb(132, 133, 132) !important;
-		border-top-color: rgb(132, 133, 132);
-		border-bottom-color: rgb(132, 133, 132);
+		border-left: 1px solid var(--border_disabled_color) !important;	
+		border-right: 1px solid var(--border_disabled_color) !important;
+		border-top-color: var(--border_disabled_color);
+		border-bottom-color: var(--border_disabled_color);
 	}
 }

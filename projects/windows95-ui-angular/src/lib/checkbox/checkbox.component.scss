@@ -2,7 +2,7 @@ label {
 	position: relative;
 	display: inline-flex;
 	margin: 8px 0px;
-	color: rgb(10, 10, 10);
+	color: var(--color_primary);
 	font-size: 1rem;
 	user-select: none;
 	-webkit-box-align: center;
@@ -10,9 +10,9 @@ label {
 }
 
 label.disabled {
-	color: rgb(132, 133, 132);
-	-webkit-text-fill-color: rgb(132, 133, 132);
-	text-shadow: rgb(254 254 254) 1px 1px;
+	color: var(--color_disabled);
+	-webkit-text-fill-color: var(--color_disabled);
+	text-shadow: var(--text_shadow);
 }
 
 input {
@@ -37,21 +37,21 @@ input {
 			border-image: initial;
 			border-width: 0px 3px 3px 0px;
 			transform: translate(-50%, -50%) rotate(45deg);
-			border-color: rgb(10, 10, 10);
+			border-color: var(--border_color_4);
 		}
 	}
 
 	&:checked:disabled ~ .checkbox {
 		& .checkbox-icon::after {
-			border-color: rgb(132, 133, 132);
+			border-color: var(--border_disabled_color);
 		}
 	}
 
 	&:focus ~ .checkbox-text {
-		outline: rgb(10, 10, 10) dotted 2px;
+		outline: var(--outline_dotted);
 	}
 	&:disabled ~ .checkbox {
-		background: rgb(198, 198, 198);
+		background: var(--background_color_primary);
 	}
 }
 
@@ -63,11 +63,11 @@ input {
 	height: 20px;
 	margin-right: 0.5rem;
 	padding: 2px;
-	background: rgb(255, 255, 255);
+	background: var(--background_color_secondary);
 	font-size: 1rem;
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	border-color: var(--border_color);
 	line-height: 1.5;
 	-webkit-box-align: center;
 	align-items: center;
@@ -83,7 +83,7 @@ input {
 		box-shadow: none;
 		border-style: solid;
 		border-width: 2px;
-		border-color: rgb(10, 10, 10) rgb(223, 223, 223) rgb(223, 223, 223) rgb(10, 10, 10);
+		border-color: var(--border_color_5);
 		pointer-events: none;
 	}
 }
