@@ -100,8 +100,8 @@ button {
 	font-family: inherit;
 
 	&::before {
-		border-left-color: var(--border_color_9);
-		border-top-color: var(--border_color_9);
+		border-left-color: var(--border_color_9) !important;
+		border-top-color: var(--border_color_9) !important;
 		box-shadow: var(--box_shadow_5);
 		box-sizing: border-box;
 		content: "";

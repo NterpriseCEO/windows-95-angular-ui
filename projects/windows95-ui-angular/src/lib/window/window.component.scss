@@ -130,7 +130,7 @@ button {
 		&::before, &::after {
 			content: "";
 			position: absolute;
-			background: var(--color_primary);
+			background: var(--window_header_button_color);
 		}
 
 		&::after {

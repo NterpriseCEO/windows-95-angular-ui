@@ -1,0 +1,46 @@
+:root {
+	--color_primary: rgb(244, 244, 237) !important;
+	--color_disabled: rgb(31, 34, 35) !important;
+	--text_shadow: rgb(147, 160, 161) 1px 1px !important;
+	--border_color_1: rgb(147, 160, 161) rgb(7, 8, 9) rgb(7, 8, 9) rgb(147, 160, 161) !important;
+	--border_color_2: rgb(7, 8, 9) rgb(147, 160, 161) rgb(147, 160, 161) rgb(7, 8, 9) !important;
+	--outline_dotted: rgb(244, 244, 237) dotted 2px !important;
+	--box_shadow_3: rgb(31, 34, 35) -1px -1px 0px 1px, rgb(31, 34, 35) -1px -1px 0px 1px inset !important;
+	--border_color_7: rgb(147, 160, 161) !important;
+	--border_color_8: rgb(31, 34, 35) !important;
+	--border_color_5: rgb(7, 8, 9) rgb(94, 105, 106) rgb(94, 105, 106) rgb(7, 8, 9) !important;
+	--box_shadow_5: rgb(147, 160, 161) 1px 1px 0px 1px inset, rgb(31, 34, 35) -1px -1px 0px 1px inset !important;
+	--border_disabled_color: rgb(31, 34, 35) !important;
+	--box_shadow_7: rgb(147, 160, 161) 1px 1px 0px !important;
+	--outline: 2px solid rgb(244, 244, 237) !important;
+	--color_secondary: rgb(255, 255, 255) !important;
+	--background_color_hover: rgb(246, 16, 103) !important;
+	--background_color_secondary: rgb(47, 52, 53) !important;
+	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset !important;
+	--border_color_4: rgb(7, 8, 9) !important;
+	--box_shadow: rgb(94, 105, 106) 1px 1px 0px 1px inset, rgb(31, 34, 35) -1px -1px 0px 1px inset !important;
+	--border_color_9: rgb(94, 105, 106) !important;
+	--box_shadow_1: rgb(31, 34, 35) 1px 1px 0px 1px inset, rgb(147, 160, 161) -1px -1px 0px 1px inset !important;
+	--border_color_10: rgb(147, 160, 161) rgb(7, 8, 9) transparent rgb(147, 160, 161) !important;
+	--caret_color: white !important;
+	--tooltip_background_color: rgb(254, 251, 204) !important;
+	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
+	--window_header_color: rgb(244, 244, 237) !important;
+	--window_header_background_color: rgb(31, 34, 35) !important;
+	--window_header_button_color: rgb(244, 244, 237) !important;
+	--window_header_blurred_color: rgb(244, 244, 237) !important;
+	--window_header_blurred_background_color: rgb(94, 105, 106) !important;
+	--border_color_6: rgb(94, 105, 106) rgb(7, 8, 9) rgb(7, 8, 9) rgb(94, 105, 106) !important;
+	--box_shadow_2: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(147, 160, 161) 1px 1px 0px 1px inset, rgb(31, 34, 35) -1px -1px 0px 1px inset !important;
+	--border_color_3: rgb(147, 160, 161) rgb(31, 34, 35) rgb(31, 34, 35) rgb(147, 160, 161) !important;
+	--box_shadow_6: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(147, 160, 161) 1px 1px 0px 1px inset, rgb(31, 34, 35) -1px -1px 0px 1px inset !important;
+	--background_color_primary: rgb(70, 80, 81) !important;
+	--border_color: rgb(31, 34, 35) rgb(147, 160, 161) rgb(147, 160, 161) rgb(31, 34, 35) !important;
+	--webkit_scrollbar_track_background_color: rgb(147, 160, 161) !important;
+	--webkit_scrollbar_track_background_color_2: rgb(70, 80, 81) !important;
+
+	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(244, 244, 237)'><polygon points='50,00 00,50 100,50'/></svg>") !important;
+	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(244, 244, 237)'><polygon points='50,50 00,00 100,00'/></svg>") !important;
+	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(244, 244, 237)'><polygon points='00,50 50,00 50,100'/></svg>") !important;
+	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(244, 244, 237)'><polygon points='50,50 00,00 00,100'/></svg>") !important;
+}

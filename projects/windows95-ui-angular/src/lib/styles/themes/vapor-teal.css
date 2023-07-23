@@ -27,13 +27,21 @@
 	--box_shadow_6: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(88, 255, 255) 1px 1px 0px 1px inset, rgb(0, 112, 111) -1px -1px 0px 1px inset !important;
 	--window_header_blurred_color: rgb(36, 106, 115) !important;
 	--window_header_blurred_background_color: rgb(47, 206, 205) !important;
+	--window_header_button_color: rgb(0, 0, 0) !important;
 	--background_color_hover: rgb(255, 153, 200) !important;
 	--border_color_6: rgb(47, 206, 205) rgb(0, 0, 0) rgb(0, 0, 0) rgb(47, 206, 205) !important;
 	--box_shadow_2: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(88, 255, 255) 1px 1px 0px 1px inset, rgb(0, 112, 111) -1px -1px 0px 1px inset !important;
 	--border_color_3: rgb(88, 255, 255) rgb(0, 112, 111) rgb(0, 112, 111) rgb(88, 255, 255) !important;
 	--background_color_primary: rgb(1, 168, 168) !important;
 	--border_color: rgb(0, 112, 111) rgb(88, 255, 255) rgb(88, 255, 255) rgb(0, 112, 111) !important;
-	--outline_color: rgb(0, 0, 0) !important;
 	--window_header_color: rgb(88, 255, 255) !important;
 	--window_header_background_color: rgb(36, 106, 115) !important;
+	--webkit_tap_highlight_color: rgba(0, 0, 0, 0) !important;
+	--webkit_scrollbar_track_background_color: rgb(88, 255, 255) !important;
+	--webkit_scrollbar_track_background_color_2: rgb(1, 168, 168) !important;
+
+	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,00 00,50 100,50'/></svg>") !important;
+	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 100,00'/></svg>") !important;
+	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='00,50 50,00 50,100'/></svg>") !important;
+	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 00,100'/></svg>") !important;
 }

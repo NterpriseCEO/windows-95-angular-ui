@@ -28,7 +28,7 @@
 ::-webkit-scrollbar-thumb {
 	box-sizing: border-box;
 	display: inline-block;
-	background: var(--background_color_primary);
+	background: var(--background_color_primary) !important;
 	color: var(--color_primary);
 	border-style: solid;
 	border-width: 2px;
@@ -38,29 +38,29 @@
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--color_secondary);
-	background-image: linear-gradient(45deg, var(--background_color_primary) 25%, transparent 25%, transparent 75%, var(--background_color_primary) 75%), linear-gradient(45deg, var(--background_color_primary) 25%, transparent 25%, transparent 75%, var(--background_color_primary) 75%);
+	background-image: linear-gradient(45deg, var(--webkit_scrollbar_track_background_color_2) 25%, transparent 25%, transparent 75%, var(--webkit_scrollbar_track_background_color_2) 75%), linear-gradient(45deg, var(--webkit_scrollbar_track_background_color_2) 25%, transparent 25%, transparent 75%, var(--webkit_scrollbar_track_background_color_2) 75%);
+	background-color: var(--webkit_scrollbar_track_background_color);
 	background-size: 4px 4px;
 	background-position: 0px 0px, 2px 2px;
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,00 00,50 100,50'/></svg>");
+    background-image: var(--scrollbar_button_vertical_decrement);
     background-position: 3px 6px;
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 100,00'/></svg>");
+    background-image: var(--scrollbar_button_vertical_increment);
     background-position: 3px 6px;
 }
 
 ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='00,50 50,00 50,100'/></svg>");
+    background-image: var(--scrollbar_button_horizontal_decrement);
     background-position: 6px 3px;
 }
 
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 00,100'/></svg>");
+	background-image: var(--scrollbar_button_horizontal_increment);
     background-position: 6px 3px;
 }
 
