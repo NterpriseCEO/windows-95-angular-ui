@@ -38,6 +38,7 @@
 	--border_color: rgb(79, 76, 2) rgb(252, 253, 62) rgb(252, 253, 62) rgb(79, 76, 2) !important;
 	--webkit_scrollbar_track_background_color: rgb(252, 253, 62) !important;
 	--webkit_scrollbar_track_background_color_2: rgb(128, 127, 0) !important;
+	--high_contrast_color: rgb(0, 0, 0) !important;
 
 	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,00 00,50 100,50'/></svg>") !important;
 	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 00,00 100,00'/></svg>") !important;

@@ -6,9 +6,7 @@
 	font-size: 1rem;
 	background: var(--background_color_primary);
 	color: var(--color_primary);
-	border-style: solid;
-	border-width: 2px;
-	border-color: var(--border_color_6);
+	border: 2px solid var(--border_color_6);
 	box-shadow: var(--box_shadow_6);
 }
 
