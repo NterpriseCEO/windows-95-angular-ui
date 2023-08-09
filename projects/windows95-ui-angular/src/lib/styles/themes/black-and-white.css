@@ -1,47 +1,59 @@
 :root {
-	--color_primary: rgb(0, 0, 0) !important;
-	--border_color_1: rgb(136, 140, 143) rgb(0, 0, 0) rgb(0, 0, 0) rgb(136, 140, 143) !important;
-	--border_color_2: rgb(0, 0, 0) rgb(136, 140, 143) rgb(136, 140, 143) rgb(0, 0, 0) !important;
-	--outline_dotted: rgb(0, 0, 0) dotted 2px !important;
+	--color_primary: black !important;
+	--border_color_1: rgb(136, 140, 143) black black rgb(136, 140, 143) !important;
+	--border_color_2: black rgb(136, 140, 143) rgb(136, 140, 143) black !important;
+	--outline_dotted: black dotted 2px !important;
 	--color_disabled: rgb(136, 140, 143) !important;
-	--text_shadow: rgb(255, 255, 255) 1px 1px;
+	--text_shadow: white 1px 1px;
 	--box_shadow_3: rgb(136, 140, 143) -1px -1px 0px 1px, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
 	--border_color_7: rgb(136, 140, 143) !important;
 	--border_color_8: rgb(136, 140, 143) !important;
-	--border_color_5: rgb(0, 0, 0) rgb(223, 224, 227) rgb(223, 224, 227) rgb(0, 0, 0) !important;
+	--border_color_5: black rgb(223, 224, 227) rgb(223, 224, 227) black !important;
 	--box_shadow_5: rgb(136, 140, 143) 1px 1px 0px 1px inset, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
 	--border_disabled_color: rgb(136, 140, 143) !important;
-	--box_shadow_7: rgb(255, 255, 255) 1px 1px 0px !important;
-	--outline: 2px solid rgb(0, 0, 0) !important;
-	--color_secondary: rgb(255, 255, 255) !important;
-	--background_color_hover: rgb(0, 0, 0) !important;
-	--background_color_secondary: rgb(255, 255, 255) !important;
+	--box_shadow_7: white 1px 1px 0px !important;
+	--outline: 2px solid black !important;
+	--color_secondary: white !important;
+	--background_color_hover: black !important;
+	--background_color_secondary: white !important;
 	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset !important;
-	--border_color_4: rgb(0, 0, 0) !important;
+	--border_color_4: black !important;
 	--box_shadow: rgb(223, 224, 227) 1px 1px 0px 1px inset, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
 	--border_color_9: rgb(223, 224, 227) !important;
 	--box_shadow_1: rgb(136, 140, 143) 1px 1px 0px 1px inset, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
-	--high_contrast_color: rgb(0, 0, 0) !important;
-	--border_color_10: rgb(136, 140, 143) rgb(0, 0, 0) transparent rgb(136, 140, 143) !important;
+	--high_contrast_color: black !important;
+	--border_color_10: rgb(136, 140, 143) black transparent rgb(136, 140, 143) !important;
 	--caret_color: black !important;
 	--tooltip_background_color: rgb(254, 251, 204) !important;
 	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
-	--window_header_color: rgb(255, 255, 255) !important;
-	--window_header_background_color: rgb(0, 0, 0) !important;
-	--window_header_button_color: rgb(0, 0, 0) !important;
-	--window_header_blurred_color: rgb(0, 0, 0) !important;
-	--window_header_blurred_background_color: rgb(255, 255, 255) !important;
-	--border_color_6: rgb(223, 224, 227) rgb(0, 0, 0) rgb(0, 0, 0) rgb(223, 224, 227) !important;
+	--window_header_color: white !important;
+	--window_header_background_color: black !important;
+	--window_header_button_color: black !important;
+	--window_header_blurred_color: black !important;
+	--window_header_blurred_background_color: white !important;
+	--border_color_6: rgb(223, 224, 227) black black rgb(223, 224, 227) !important;
 	--box_shadow_2: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(136, 140, 143) 1px 1px 0px 1px inset, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
 	--border_color_3: rgb(136, 140, 143) !important;
 	--box_shadow_6: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(136, 140, 143) 1px 1px 0px 1px inset, rgb(136, 140, 143) -1px -1px 0px 1px inset !important;
 	--webkit_scrollbar_track_background_color: rgb(136, 140, 143) !important;
-	--webkit_scrollbar_track_background_color_2: rgb(255, 255, 255) !important;
+	--webkit_scrollbar_track_background_color_2: white !important;
+	--tooltip_color: black !important;
 
-	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,5 10,50 90,50'/></svg>") !important;
-	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 10,5 90,5'/></svg>") !important;
-	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='5,50 50,10 50,90'/></svg>") !important;
-	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 0, 0)'><polygon points='50,50 5,10 5,90'/></svg>") !important;
-	--background_color_primary: rgb(255, 255, 255) !important;
+	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='black'><polygon points='50,5 10,50 90,50'/></svg>") !important;
+	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='black'><polygon points='50,50 10,5 90,5'/></svg>") !important;
+	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='black'><polygon points='5,50 50,10 50,90'/></svg>") !important;
+	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='black'><polygon points='50,50 5,10 5,90'/></svg>") !important;
+	--background_color_primary: white !important;
 	--border_color: rgb(136, 140, 143) !important;
+}
+
+.page-background-color-primary {
+	background-color: white !important;
+}
+
+a {
+	color: rgb(16, 52, 166) !important;
+}
+a:visited {
+	color: rgb(68, 3, 129) !important;
 }

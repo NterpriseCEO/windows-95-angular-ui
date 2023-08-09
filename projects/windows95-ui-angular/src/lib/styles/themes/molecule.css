@@ -1,0 +1,60 @@
+:root {
+	--color_primary: rgb(2, 1, 2) !important;
+	--border_color_1: rgb(215, 144, 153) rgb(75, 77, 78) rgb(75, 77, 78) rgb(215, 144, 153) !important;
+	--border_color_2: rgb(75, 77, 78) rgb(215, 144, 153) rgb(215, 144, 153) rgb(75, 77, 78) !important;
+	--outline_dotted: rgb(2, 1, 2) dotted 2px !important;
+	--color_disabled: rgb(153, 56, 69) !important;
+	--text_shadow: rgb(215, 144, 153) 1px 1px !important;
+	--box_shadow_3: rgb(153, 56, 69) -1px -1px 0px 1px, rgb(153, 56, 69) -1px -1px 0px 1px inset !important;
+	--border_color_7: rgb(215, 144, 153) !important;
+	--border_color_8: rgb(153, 56, 69) !important;
+	--border_color_5: rgb(75, 77, 78) rgb(223, 224, 227) rgb(223, 224, 227) rgb(75, 77, 78) !important;
+	--box_shadow_5: rgb(215, 144, 153) 1px 1px 0px 1px inset, rgb(153, 56, 69) -1px -1px 0px 1px inset !important;
+	--border_disabled_color: rgb(153, 56, 69) !important;
+	--box_shadow_7: rgb(215, 144, 153) 1px 1px 0px !important;
+	--outline: 2px solid rgb(2, 1, 2) !important;
+	--color_secondary: rgb(241, 245, 246) !important;
+	--background_color_hover: rgb(112, 163, 206) !important;
+	--background_color_secondary: rgb(241, 245, 246) !important;
+	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset !important;
+	--border_color_4: rgb(75, 77, 78) !important;
+	--box_shadow: rgb(223, 224, 227) 1px 1px 0px 1px inset, rgb(153, 56, 69) -1px -1px 0px 1px inset !important;
+	--border_color_9: rgb(223, 224, 227) !important;
+	--box_shadow_1: rgb(153, 56, 69) 1px 1px 0px 1px inset, rgb(215, 144, 153) -1px -1px 0px 1px inset !important;
+	--high_contrast_color: rgb(2, 1, 2) !important;
+	--border_color_10: rgb(215, 144, 153) rgb(75, 77, 78) transparent rgb(215, 144, 153) !important;
+	--caret_color: rgb(2, 1, 2) !important;
+	--tooltip_background_color: rgb(254, 251, 204) !important;
+	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
+	--window_header_color: rgb(241, 245, 246) !important;
+	--window_header_background_color: rgb(160, 61, 73) !important;
+	--window_header_button_color: rgb(2, 1, 2) !important;
+	--window_header_blurred_color: rgb(194, 193, 194) !important;
+	--window_header_blurred_background_color: rgb(127, 127, 127) !important;
+	--border_color_6: rgb(223, 224, 227) rgb(75, 77, 78) rgb(75, 77, 78) rgb(223, 224, 227) !important;
+	--box_shadow_2: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(215, 144, 153) 1px 1px 0px 1px inset, rgb(153, 56, 69) -1px -1px 0px 1px inset !important;
+	--border_color_3: rgb(215, 144, 153) rgb(153, 56, 69) rgb(153, 56, 69) rgb(215, 144, 153) !important;
+	--box_shadow_6: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(215, 144, 153) 1px 1px 0px 1px inset, rgb(153, 56, 69) -1px -1px 0px 1px inset !important;
+	--webkit_scrollbar_track_background_color: rgb(215, 144, 153) !important;
+	--webkit_scrollbar_track_background_color_2: rgb(194, 193, 194) !important;
+	--tooltip_color: rgb(2, 1, 2) !important;
+
+	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(2, 1, 2)'><polygon points='50,5 10,50 90,50'/></svg>") !important;
+	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(2, 1, 2)'><polygon points='50,50 10,5 90,5'/></svg>") !important;
+	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(2, 1, 2)'><polygon points='5,50 50,10 50,90'/></svg>") !important;
+	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(2, 1, 2)'><polygon points='50,50 5,10 5,90'/></svg>") !important;
+	--background_color_primary: rgb(194, 193, 194) !important;
+	--border_color: rgb(153, 56, 69) rgb(215, 144, 153) rgb(215, 144, 153) rgb(153, 56, 69) !important;
+}
+
+
+.page-background-color-primary {
+	background-color: rgb(58, 110, 165) !important;
+}
+
+a {
+	color: rgb(16, 52, 166) !important;
+}
+a:visited {
+	color: rgb(68, 3, 129) !important;
+}

@@ -4,10 +4,10 @@
 	--color_disabled: rgb(138, 91, 104) !important;
 	--window_header_blurred_color: rgb(97, 95, 104) !important;
 	--webkit_tap_highlight_color: rgba(0, 0, 0, 0) !important;
-	--caret_color: black !important;
+	--caret_color: rgb(5, 6, 8)black !important;
 	--text_shadow: rgb(241, 212, 220) 1px 1px !important;
 	--background_color_primary: rgb(214, 173, 184) !important;
-	--background_color_secondary: rgb(255, 255, 255) !important;
+	--background_color_secondary: white !important;
 	--window_header_blurred_background_color: rgb(161, 159, 165) !important;
 	--background_color_hover: rgb(171, 90, 113) !important;
 	--tooltip_background_color: rgb(254, 251, 204) !important;
@@ -34,15 +34,28 @@
 	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
 	--outline: rgb(5, 6, 8) solid 2px !important;
 	--outline_dotted: rgb(5, 6, 8) dotted 2px !important;
-	--window_header_color: rgb(255, 255, 255) !important;
+	--window_header_color: white !important;
 	--window_header_background_color: rgb(171, 90, 113) !important;
 	--window_header_button_color: rgb(5, 6, 8) !important;
 	--webkit_scrollbar_track_background_color: rgb(241, 212, 220) !important;
 	--webkit_scrollbar_track_background_color_2: rgb(214, 173, 184) !important;
 	--high_contrast_color: rgb(5, 6, 8) !important;
+	--tooltip_color: rgb(5, 6, 8) !important;
 
 	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(5, 6, 8)'><polygon points='50,5 10,50 90,50'/></svg>") !important;
 	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(5, 6, 8)'><polygon points='50,50 10,5 90,5'/></svg>") !important;
 	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(5, 6, 8)'><polygon points='5,50 50,10 50,90'/></svg>") !important;
 	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(5, 6, 8)'><polygon points='50,50 5,10 5,90'/></svg>") !important;
+}
+
+
+.page-background-color-primary {
+	background-color: rgb(128, 128, 128) !important;
+}
+
+a {
+	color: rgb(16, 52, 166) !important;
+}
+a:visited {
+	color: rgb(68, 3, 129) !important;
 }

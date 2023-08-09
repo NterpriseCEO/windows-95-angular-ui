@@ -14,7 +14,7 @@
 	--box_shadow_7: rgb(223, 155, 231) 1px 1px 0px !important;
 	--outline: rgb(1, 0, 1) solid 2px !important;
 	--color_secondary: rgb(1, 0, 1) !important;
-	--background_color_secondary: rgb(255, 255, 255) !important;
+	--background_color_secondary: white !important;
 	--border_color_4: rgb(1, 0, 1) !important;
 	--border_color_9: rgb(217, 130, 222) !important;
 	--box_shadow: rgb(217, 130, 222) 1px 1px 0px 1px inset, rgb(108, 31, 113) -1px -1px 0px 1px inset !important;
@@ -22,10 +22,10 @@
 	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset !important;
 	--background_color_hover: rgb(0, 255, 0) !important;
 	--border_color_10: rgb(223, 155, 231) rgb(1, 0, 1) transparent rgb(223, 155, 231) !important;
-	--caret_color: black !important;
+	--caret_color: rgb(1, 0, 1) !important;
 	--tooltip_background_color: rgb(254, 251, 204) !important;
 	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
-	--window_header_color: rgb(255, 255, 255) !important;
+	--window_header_color: white !important;
 	--window_header_background_color: rgb(5, 0, 128) !important;
 	--window_header_button_color: rgb(1, 0, 1) !important;
 	--window_header_blurred_color: rgb(223, 155, 231) !important;
@@ -39,9 +39,22 @@
 	--webkit_scrollbar_track_background_color: rgb(223, 155, 231) !important;
 	--webkit_scrollbar_track_background_color_2: rgb(208, 103, 215) !important;
 	--high_contrast_color: rgb(1, 0, 1) !important;
+	--tooltip_color: rgb(1, 0, 1) !important;
 
 	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(1, 0, 1)'><polygon points='50,5 10,50 90,50'/></svg>") !important;
 	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(1, 0, 1)'><polygon points='50,50 10,5 90,5'/></svg>") !important;
 	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(1, 0, 1)'><polygon points='5,50 50,10 50,90'/></svg>") !important;
 	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(1, 0, 1)'><polygon points='50,50 5,10 5,90'/></svg>") !important;
+}
+
+
+.page-background-color-primary {
+	background-color: rgb(146, 69, 138) !important;
+}
+
+a {
+	color: rgb(16, 52, 166) !important;
+}
+a:visited {
+	color: rgb(68, 3, 129) !important;
 }

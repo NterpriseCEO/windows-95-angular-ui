@@ -32,7 +32,7 @@
 	/*tr hover*/
 	--background_color_hover: rgb(6, 0, 132);
 	/*tbody*/
-	--background_color_secondary: rgb(255, 255, 255);
+	--background_color_secondary: white;
 	/*tbody*/
 	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset;
 	/*th before*/
@@ -48,11 +48,13 @@
 	/*tabview button*/
 	--border_color_10: rgb(254, 254, 254) rgb(10, 10, 10) transparent rgb(254, 254, 254);
 	/*password input*/
-	--caret_color: black;
+	--caret_color: rgb(10, 10, 10);
 	/*toolip*/
 	--tooltip_background_color: rgb(254, 251, 204);
 	/*tooltip*/
 	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px;
+	/*tooltip*/
+	--tooltip_color: rgb(10, 10, 10);
 	/*window header color*/
 	--window_header_color: rgb(254, 254, 254);
 	/*window header background color*/
@@ -82,4 +84,15 @@
 	--background_color_primary: rgb(198, 198, 198);
 	/*avatar*/
 	--border_color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+}
+
+.page-background-color-primary {
+	background-color: #00807F;
+}
+
+a {
+	color: rgb(16, 52, 166);
+}
+a:visited {
+	color: rgb(68, 3, 129);
 }

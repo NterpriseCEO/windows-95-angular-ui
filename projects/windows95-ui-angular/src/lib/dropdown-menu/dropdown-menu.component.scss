@@ -22,7 +22,8 @@ ul {
 	padding: 4px;
 	background: var(--background_color_primary);
 	color: var(--color_primary);
-	border: 2px solid var(--border_color_6);
+	border: 2px solid;
+	border-color: var(--border_color_6);
 	box-shadow: var(--box_shadow_2);
 	z-index: 900;
 	opacity: 0;

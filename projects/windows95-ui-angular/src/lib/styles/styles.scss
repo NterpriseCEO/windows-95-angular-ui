@@ -155,7 +155,7 @@ th:active::before {
 	padding-top: 2px;
 	border-right-color: var(--border_color_9);
 	border-bottom-color: var(--border_color_9);
-	box-shadow: var(--box_shadow);
+	box-shadow: var(--box_shadow_1);
 }
 
 th:active>* {
@@ -271,10 +271,6 @@ input {
 /////////Colours///////////////////////////////////////////////////////
 .bg-default-blue {
 	background-color: #3A6EA5 !important;
-}
-
-.bg-default-teal {
-	background-color: #00807F !important;
 }
 
 .bg-default-white {

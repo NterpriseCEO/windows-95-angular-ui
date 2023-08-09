@@ -1,0 +1,60 @@
+:root {
+	--color_primary: white !important;
+	--border_color_1: rgb(128, 128, 128) !important;
+	--border_color_2: rgb(128, 128, 128) !important;
+	--outline_dotted: white dotted 2px !important;
+	--color_disabled: rgb(128, 128, 128) !important;
+	--text_shadow: rgb(128, 128, 128) 1px 1px !important;
+	--box_shadow_3: rgb(128, 128, 128) -1px -1px 0px 1px, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--border_color_7: rgb(128, 128, 128) !important;
+	--border_color_8: rgb(128, 128, 128) !important;
+	--border_color_5: rgb(128, 128, 128) !important;
+	--box_shadow_5: rgb(128, 128, 128) 1px 1px 0px 1px inset, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--border_disabled_color: rgb(128, 128, 128) !important;
+	--box_shadow_7: rgb(128, 128, 128) 1px 1px 0px !important;
+	--outline: 2px solid white !important;
+	--color_secondary: white !important;
+	--background_color_hover: rgb(0, 128, 128) !important;
+	--background_color_secondary: rgb(1, 36, 86) !important;
+	--box_shadow_4: rgb(0 0 0 / 20%) 2px 2px 3px inset !important;
+	--border_color_4: rgb(128, 128, 128) !important;
+	--box_shadow: rgb(128, 128, 128) 1px 1px 0px 1px inset, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--border_color_9: rgb(128, 128, 128) !important;
+	--box_shadow_1: rgb(128, 128, 128) 1px 1px 0px 1px inset, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--high_contrast_color: rgb(238, 237, 240) !important;
+	--border_color_10: rgb(128, 128, 128) rgb(128, 128, 128) transparent rgb(128, 128, 128) !important;
+	--caret_color: white !important;
+	--tooltip_background_color: rgb(255, 255, 225) !important;
+	--box_shadow_8: rgb(0 0 0 / 35%) 4px 4px 10px 0px !important;
+	--window_header_color: white !important;
+	--window_header_background_color: rgb(1, 36, 86) !important;
+	--window_header_button_color: white !important;
+	--window_header_blurred_color: rgb(192, 192, 192) !important;
+	--window_header_blurred_background_color: rgb(1, 36, 86) !important;
+	--border_color_6: rgb(128, 128, 128) !important;
+	--box_shadow_2: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(128, 128, 128) 1px 1px 0px 1px inset, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--border_color_3: rgb(128, 128, 128) !important;
+	--box_shadow_6: rgba(0, 0, 0, 0.35) 4px 4px 10px 0px, rgb(128, 128, 128) 1px 1px 0px 1px inset, rgb(128, 128, 128) -1px -1px 0px 1px inset !important;
+	--webkit_scrollbar_track_background_color: rgb(128, 128, 128) !important;
+	--webkit_scrollbar_track_background_color_2: rgb(1, 36, 86) !important;
+	--tooltip_color: black !important;
+
+	--scrollbar_button_vertical_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='white'><polygon points='50,5 10,50 90,50'/></svg>") !important;
+	--scrollbar_button_vertical_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='white'><polygon points='50,50 10,5 90,5'/></svg>") !important;
+	--scrollbar_button_horizontal_decrement: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='white'><polygon points='5,50 50,10 50,90'/></svg>") !important;
+	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='white'><polygon points='50,50 5,10 5,90'/></svg>") !important;
+	--background_color_primary: rgb(1, 36, 86) !important;
+	--border_color: rgb(1, 36, 86) !important;
+}
+
+
+.page-background-color-primary {
+	background-color: var(--background_color_primary) !important;
+}
+
+a {
+	color: rgb(16, 52, 166) !important;
+}
+a:visited {
+	color: rgb(0, 192, 0) !important;
+}
