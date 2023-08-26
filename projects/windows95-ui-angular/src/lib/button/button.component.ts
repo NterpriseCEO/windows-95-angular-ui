@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 @Component({
 	selector: "windows-button",
 	template: `<button (click) = "click()" [disabled] = "disabled" [class] = "styleClass"><ng-content></ng-content></button>`,
-	styleUrls: ["button.component.scss"]
+	styleUrls: ["./button.component.scss"]
 })
 export class WindowsButton {
 	constructor() { }

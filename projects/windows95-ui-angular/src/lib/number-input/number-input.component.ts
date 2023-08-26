@@ -2,8 +2,8 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "number-input",
-	templateUrl: "number-input.component.html",
-	styleUrls: ["number-input.component.scss"]
+	templateUrl: "./number-input.component.html",
+	styleUrls: ["./number-input.component.scss"]
 })
 export class NumberInput {
 

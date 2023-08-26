@@ -6,7 +6,7 @@ import { Tab } from "../tab/tab.component";
 @Component({
 	selector: "tab-view",
 	templateUrl: "./tabview.component.html",
-	styleUrls: ["tabview.component.scss"]
+	styleUrls: ["./tabview.component.scss"]
 })
 export class TabView implements AfterContentInit, OnChanges {
 

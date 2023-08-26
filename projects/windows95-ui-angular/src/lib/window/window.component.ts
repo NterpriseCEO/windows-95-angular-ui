@@ -2,8 +2,8 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
 	selector: "window",
-	templateUrl: "window.component.html",	
-	styleUrls: ["window.component.scss"]
+	templateUrl: "./window.component.html",	
+	styleUrls: ["./window.component.scss"]
 })
 export class WindowComponent {
 

@@ -4,8 +4,8 @@ import { ScrollService } from "./scroll.directive";
 
 @Component({
 	selector: "dropdown-menu",
-	templateUrl: "dropdown-menu.component.html",
-	styleUrls: ["dropdown-menu.component.scss"]
+	templateUrl: "./dropdown-menu.component.html",
+	styleUrls: ["./dropdown-menu.component.scss"]
 })
 export class DropdownMenu implements AfterViewInit {
 

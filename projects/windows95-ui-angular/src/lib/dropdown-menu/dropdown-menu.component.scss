@@ -40,6 +40,7 @@ ul {
 
 	& a {
 		padding: 8px;
+		color: var(--color_primary) !important;
 	}
 }
 
@@ -83,7 +84,7 @@ li {
 
 	&:hover a {
 		background: var(--background_color_hover);
-		color: var(--color_secondary);
+		color: var(--color_secondary) !important;
 	}
 }
 

@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 @Component({
 	selector: "password-input",
 	templateUrl: "./password-input.component.html",
-	styleUrls: ["password-input.component.scss"]
+	styleUrls: ["./password-input.component.scss"]
 })
 export class PasswordInput implements OnChanges{
 

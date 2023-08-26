@@ -6,7 +6,7 @@ import { Component, Input } from "@angular/core";
 					<legend>{{legend}}</legend>
 					<ng-content></ng-content>
 				</fieldset>`,
-	styleUrls: ["fieldset.component.scss"]
+	styleUrls: ["./fieldset.component.scss"]
 })
 export class Fieldset {
 

@@ -45,6 +45,7 @@
 	--scrollbar_button_horizontal_increment: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='130' height='130' fill='rgb(0, 1, 15)'><polygon points='50,50 5,10 5,90'/></svg>") !important;
 	--background_color_primary: rgb(151, 185, 203) !important;
 	--border_color: rgb(68, 107, 124) rgb(195, 217, 233) rgb(195, 217, 233) rgb(68, 107, 124) !important;
+	--outline_dotted_2: 2px dotted rgb(254, 254, 3) !important;
 }
 
 

@@ -4,8 +4,8 @@ import { PopupService } from "./popup-service";
 
 @Component({
 	selector: "popup",
-	templateUrl: "popup.component.html",	
-	styleUrls: ["popup.component.scss"]
+	templateUrl: "./popup.component.html",	
+	styleUrls: ["./popup.component.scss"]
 })
 export class PopupComponent implements AfterViewChecked, OnDestroy {
 

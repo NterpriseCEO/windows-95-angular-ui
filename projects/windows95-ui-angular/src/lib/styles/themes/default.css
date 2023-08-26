@@ -84,6 +84,8 @@
 	--background_color_primary: rgb(198, 198, 198);
 	/*avatar*/
 	--border_color: rgb(132, 133, 132) rgb(254, 254, 254) rgb(254, 254, 254) rgb(132, 133, 132);
+	/*select option display focused*/
+	--outline_dotted_2: 2px dotted rgb(254, 254, 3);
 }
 
 .page-background-color-primary {

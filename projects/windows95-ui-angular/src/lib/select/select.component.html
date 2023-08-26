@@ -1,0 +1,39 @@
+<div
+	#selectWrapper
+	[class.disabled] = "disabled"
+	class = "select-wrapper"
+	(click) = "displayOptions()"
+>
+	<div #select class = "select" [style.width.px] = "width">
+		<input type = "hidden">
+		<div
+			class = "selected-option-display"
+			[class.selected-option-display-focused] = "focusOptionDisplay"
+		>
+			{{selectedOption?.name}}
+		</div>
+		<div class = "show-options-button">
+			<span class = "button-down-arrow"></span>
+		</div>
+	</div>
+	<ul
+		#optionsList
+		class = "options"
+		[class.show-options] = "showOptions"
+		(keydown.arrowup) = "changeSelectedOption($event, -1)"
+		(keydown.arrowdown) = "changeSelectedOption($event, 1)"
+		(keydown.enter) = "selectOption($event)"
+		tabindex = "-1"
+	>
+		<li
+			#option
+			*ngFor = "let option of optionList"
+			class = "options-item"
+			[class.selected] = "option.name === hoveredOption?.name || (!hoveredOption && option.name === selectedOption?.name)"
+			(click) = "selectOption($event, option)"
+			(mouseover) = "setHoveredOption(option)"
+		>
+			{{option.name}}
+		</li>
+	</ul>
+</div>

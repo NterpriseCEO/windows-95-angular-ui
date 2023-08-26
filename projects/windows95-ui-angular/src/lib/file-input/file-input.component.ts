@@ -3,7 +3,7 @@ import { Component, ElementRef, EventEmitter, Input, Output } from "@angular/cor
 @Component({
 	selector: "file-input",
 	templateUrl: "./file-input.component.html",
-	styleUrls: ["file-input.component.scss"]
+	styleUrls: ["./file-input.component.scss"]
 })
 export class FileInput {
 	constructor(private elRef: ElementRef) {}
