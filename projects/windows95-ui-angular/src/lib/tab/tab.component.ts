@@ -6,14 +6,9 @@ import { Component, Input, TemplateRef } from "@angular/core";
 })
 export class Tab {	
 
-	@Input() tabTitle: string = "Tab"
-	@Input() templateRef!: TemplateRef<any>;
+	@Input() tabTitle: string = "Tab";
 
 	active: boolean = false;
 
 	constructor() { }
-
-	ngOnInit() {
-		console.log("tab init", this.templateRef);
-	}
 }
