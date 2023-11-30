@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Input, OnChanges, AfterViewInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren } from "@angular/core";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Input, OnChanges, AfterViewInit, Output, QueryList, SimpleChanges, ViewChild, ViewChildren, OnDestroy } from "@angular/core";
 
 interface Option {name: string, value: string};
 
@@ -8,7 +8,7 @@ interface Option {name: string, value: string};
 	styleUrls: ["./select.component.scss"],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Select implements OnChanges, AfterViewInit {
+export class Select implements OnChanges, AfterViewInit, OnDestroy {
 
 	@ViewChild("selectWrapper") selectWrapper: ElementRef = new ElementRef(null);
 	@ViewChild("select") select: ElementRef = new ElementRef(null);
@@ -32,6 +32,8 @@ export class Select implements OnChanges, AfterViewInit {
 	selectedOptionIndex = 0;
 	width: number = 50;
 
+	resizeObserver!: ResizeObserver;
+
 	constructor(private changeDetector: ChangeDetectorRef) {}
 
 	@HostListener('document:mousedown', ['$event'])
@@ -46,6 +48,7 @@ export class Select implements OnChanges, AfterViewInit {
 	ngAfterViewInit() {
 		//Sets width of select to width of selectWrapper
 		this.optionList = this.options;
+		this.changeDetector.detectChanges();
 
 		this.option.changes.subscribe(() => {
 			this.width = this.optionsList.nativeElement.offsetWidth;
@@ -55,7 +58,13 @@ export class Select implements OnChanges, AfterViewInit {
 			this.selectedOptionIndex = this.optionList.findIndex(option => option.value === this.value);
 			this.changeDetector.detectChanges();
 		});
-		this.changeDetector.detectChanges();
+
+		//waits for optionslist ResizeObserver
+		this.resizeObserver = new ResizeObserver(() => {
+			this.width = this.optionsList.nativeElement.offsetWidth;
+			this.changeDetector.detectChanges();
+		});
+		this.resizeObserver.observe(this.optionsList.nativeElement);
 	}
 
 	ngOnChanges(changes: SimpleChanges) {
@@ -63,6 +72,10 @@ export class Select implements OnChanges, AfterViewInit {
 		this.selectedOptionIndex = this.optionList.findIndex(option => option.value === this.value);
 
 		this.changeDetector.detectChanges();
+	}
+
+	ngOnDestroy() {
+		this.resizeObserver.disconnect();
 	}
 
 	displayOptions() {

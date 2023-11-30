@@ -58,8 +58,6 @@ export class DropdownMenu implements AfterViewInit {
 		this.wrapper = this.menuWrapper.nativeElement;
 
 		document.body.appendChild(this.menu);
-
-		this.realignMenu();
 	}
 
 
@@ -79,6 +77,8 @@ export class DropdownMenu implements AfterViewInit {
 			let mbr = this.menu.getBoundingClientRect();
 			this.menu.style.top = (fbr.top + fbr.height) + "px";
 			this.menu.style.left = fbr.left + "px";
+
+			console.log("Menu is in viewport", fbr, mbr, this.menu);
 
 			fbr = this.wrapper.getBoundingClientRect();
 			mbr = this.menu.getBoundingClientRect();
@@ -104,6 +104,12 @@ export class DropdownMenu implements AfterViewInit {
 			fbr.bottom <= window.innerHeight &&
 			fbr.right <= window.innerWidth
 		);
+	}
+
+	startHoveringOverMenu() {
+		this.hovering = true
+
+		this.realignMenu();
 	}
 }
 

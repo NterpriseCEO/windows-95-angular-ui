@@ -1,9 +1,9 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnDestroy } from '@angular/core';
 
 @Directive({
 	selector: '[tooltip]',
 })
-export class TooltipDirective {
+export class TooltipDirective implements OnDestroy {
 
 	span: HTMLElement = document.createElement('span');
 
@@ -27,5 +27,9 @@ export class TooltipDirective {
 	@HostListener('mouseout', ['$event'])
 	hideTooltip(event: KeyboardEvent) {
 		this.span.style.display = 'none';
+	}
+
+	ngOnDestroy() {
+		this.span.remove();
 	}
 }

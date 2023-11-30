@@ -1,7 +1,7 @@
 <div
 	#menuWrapper
 	class = "windows-dropdown relative"
-	(mouseenter) = "hovering = true"
+	(mouseenter) = "startHoveringOverMenu()"
 	(mouseleave) = "checkIfHovering()"
 >
 	<ng-container *ngIf = "menuItems[0]?.routerLink">
@@ -9,8 +9,8 @@
 			<windows-button
 				[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
 				[routerLink] = "menuItems[0].routerLink"
-				[queryParams]="menuItems[0]?.queryParams"
-				[disabled] = "menuItems[0]?.disabled || false"
+				[queryParams] = "menuItems[0].queryParams"
+				[disabled] = "menuItems[0].disabled || false"
 			>
 				{{menuItems[0].text}}
 			</windows-button>
@@ -18,12 +18,12 @@
 	</ng-container>
 	<ng-container *ngIf = "!menuItems[0]?.routerLink">
 		<a
-			[attr.href] = "menuItems[0]?.href ? menuItems[0].href : null"
-			(click) = "menuItems[0]?.onClick ? menuItems[0]?.onClick() : null"
+			[attr.href] = "menuItems[0].href ? menuItems[0].href : null"
+			(click) = "menuItems[0].onClick ? menuItems[0].onClick() : null"
 		>
 			<windows-button
 				[styleClass] = "isToolbarDropdown ? 'toolbar-button' : ''"
-				[disabled] = "menuItems[0]?.disabled || false"
+				[disabled] = "menuItems[0].disabled || false"
 			>
 				{{menuItems[0].text}}
 			</windows-button>
