@@ -13,7 +13,7 @@ export class Select implements OnChanges, AfterViewInit, OnDestroy {
 	@ViewChild("selectWrapper") selectWrapper: ElementRef = new ElementRef(null);
 	@ViewChild("select") select: ElementRef = new ElementRef(null);
 	@ViewChild("optionsList") optionsList: ElementRef = new ElementRef(null);
-	@ViewChildren('option') option: QueryList<any> = new QueryList<any>();
+	@ViewChildren("option") option: QueryList<any> = new QueryList<any>();
 
 	showOptions = false;
 	focusOptionDisplay = false;
@@ -36,7 +36,7 @@ export class Select implements OnChanges, AfterViewInit, OnDestroy {
 
 	constructor(private changeDetector: ChangeDetectorRef) {}
 
-	@HostListener('document:mousedown', ['$event'])
+	@HostListener("document:mousedown", ["$event"])
 	onGlobalClick(event: Event) {
 		//Hides options if click is outside of selectWrapper
 		if (!this.selectWrapper.nativeElement.contains(event.target)) {

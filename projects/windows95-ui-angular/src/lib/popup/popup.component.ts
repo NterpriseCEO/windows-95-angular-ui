@@ -62,7 +62,7 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 	}
 
 	isText(data: any): data is string {
-		return typeof data === 'string';
+		return typeof data === "string";
 	};
 	ngOnDestroy() {
 	}

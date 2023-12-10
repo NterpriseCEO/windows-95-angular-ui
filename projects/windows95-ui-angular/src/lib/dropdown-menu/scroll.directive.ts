@@ -1,7 +1,7 @@
-import { Directive, ElementRef, Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Directive, ElementRef, Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 @Directive({
-	selector: '[scrollDirective]'
+	selector: "[scrollDirective]"
 })
 export class ScrollDirective {
 
@@ -12,14 +12,14 @@ export class ScrollDirective {
 		const element = this.eleRef.nativeElement;
 
 		//This assists the dropdown menu in realigning itself when the window is scrolled
-		element.addEventListener('scroll', () => {
+		element.addEventListener("scroll", () => {
 			this.scrollService.scrollSubject.next(null);
 		});
 	}
 }
 
 @Injectable({
-	providedIn: 'root'
+	providedIn: "root"
 })
 export class ScrollService {
 	

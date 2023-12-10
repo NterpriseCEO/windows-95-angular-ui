@@ -205,7 +205,7 @@ a {
 }
 
 input {
-	cursor: text;
+	cursor: url("./cursors/text.cur"), text;
 }
 
 //Overflow proeprties
@@ -256,7 +256,7 @@ input {
 	src: url('ms-sans-serif-bold.woff2') format('woff2');
 }
 
-* {
+body {
 	cursor: url("./cursors/arrow.cur"), auto;
 }
 
@@ -1212,121 +1212,121 @@ a.unstyled {
 
 ///////Cursor classes/////////
 .cursor-alias {
-	cursor: alias;
+	cursor: alias !important;
 }
 
 .cursor-all-scroll,
 .cursor-move {
-	cursor: url("./cursors/four-way-arrows.cur"), auto;
+	cursor: url("./cursors/four-way-arrows.cur"), auto !important;
 }
 
 .cursor-auto {
-	cursor: auto;
+	cursor: auto !important;
 }
 
 .cursor-default {
-	cursor: url("./cursors/arrow.cur"), auto;
+	cursor: url("./cursors/arrow.cur"), auto !important;
 }
 
 .cursor-cell {
-	cursor: cell;
+	cursor: cell !important;
 }
 
 .cursor-context-menu {
-	cursor: context-menu;
+	cursor: context-menu !important;
 }
 
 .cursor-col-resize {
-	cursor: col-resize;
+	cursor: col-resize !important;
 }
 
 .cursor-copy {
-	cursor: copy;
+	cursor: copy !important;
 }
 
 .cursor-crosshair {
-	cursor: url("./cursors/beam.cur"), auto;
+	cursor: url("./cursors/beam.cur"), auto !important;
 }
 
 .cursor-e-resize,
 .cursor-ew-resize {
-	cursor: url("./cursors/horizontal-resize.cur"), auto;
+	cursor: url("./cursors/horizontal-resize.cur"), auto !important;
 }
 
 .cursor-grab {
-	cursor: grab;
+	cursor: grab !important;
 }
 
 .cursor-grabbing {
-	cursor: grabbing;
+	cursor: grabbing !important;
 }
 
 .cursor-help {
-	cursor: url("./cursors/help_win95.cur"), auto;
+	cursor: url("./cursors/help_win95.cur"), auto !important;
 }
 
 .cursor-n-resize,
 .cursor-ns-resize,
 .cursor-s-resize {
-	cursor: url("./cursors/vertical-resize.cur"), auto;
+	cursor: url("./cursors/vertical-resize.cur"), auto !important;
 }
 
 .cursor-ne-resize,
 .cursor-nesw-resize,
 .cursor-sw-resize {
-	cursor: url("./cursors/left-diagonal-resize.cur"), auto;
+	cursor: url("./cursors/left-diagonal-resize.cur"), auto !important;
 }
 
 .cursor-nw-resize,
 .cursor-nwse-resize,
 .cursor-se-resize {
-	cursor: url("./cursors/right-diagonal-resize.cur"), auto;
+	cursor: url("./cursors/right-diagonal-resize.cur"), auto !important;
 }
 
 .cursor-no-drop,
 .cursor-not-allowed {
-	cursor: url("./cursors/not-allowed.cur"), auto;
+	cursor: url("./cursors/not-allowed.cur"), auto !important;
 }
 
 .cursor-none {
-	cursor: none;
+	cursor: none !important;
 }
 
 .cursor-pointer {
-	cursor: url("./cursors/pointer.cur"), auto;
+	cursor: url("./cursors/pointer.cur"), auto !important;
 }
 
 .cursor-progress,
 .cursor-wait {
-	cursor: url("./cursors/wait.cur"), auto;
+	cursor: url("./cursors/wait.cur"), auto !important;
 }
 
 .cursor-row-resize {
-	cursor: row-resize;
+	cursor: row-resize !important;
 }
 
 .cursor-text {
-	cursor: url("./cursors/text.cur"), auto;
+	cursor: url("./cursors/text.cur"), auto !important;
 }
 
-.w-resize {
-	cursor: w-resize;
+.cursor-w-resize {
+	cursor: w-resize !important;
 }
 
 .cursor-cd {
-	cursor: url("./cursors/cd.cur"), auto;
+	cursor: url("./cursors/cd.cur"), auto !important;
 }
 
 .cursor-zoom-in {
-	cursor: zoom-in;
+	cursor: zoom-in !important;
 }
 
 .cursor-zoom-out {
-	cursor: zoom-out;
+	cursor: zoom-out !important;
 }
 
 .cursor-vertical-text {
-	cursor: vertical-text;
+	cursor: vertical-text !important;
 }
 
 ///////Display classes/////////

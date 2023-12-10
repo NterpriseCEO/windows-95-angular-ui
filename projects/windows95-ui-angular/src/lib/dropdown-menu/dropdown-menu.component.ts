@@ -14,7 +14,7 @@ export class DropdownMenu implements AfterViewInit {
 
 	@ViewChild("dropdownMenu") dropdownMenu!: ElementRef;
 
-	@ViewChild('menuWrapper') menuWrapper!: ElementRef;
+	@ViewChild("menuWrapper") menuWrapper!: ElementRef;
 
 	menu: any;
 	wrapper: any;
@@ -77,8 +77,6 @@ export class DropdownMenu implements AfterViewInit {
 			let mbr = this.menu.getBoundingClientRect();
 			this.menu.style.top = (fbr.top + fbr.height) + "px";
 			this.menu.style.left = fbr.left + "px";
-
-			console.log("Menu is in viewport", fbr, mbr, this.menu);
 
 			fbr = this.wrapper.getBoundingClientRect();
 			mbr = this.menu.getBoundingClientRect();
