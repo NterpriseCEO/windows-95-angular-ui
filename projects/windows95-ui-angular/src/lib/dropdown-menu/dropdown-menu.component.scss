@@ -24,7 +24,7 @@ ul {
 	margin: 0;
 	padding: 4px;
 	background: var(--background_color_primary);
-	color: var(--color_primary);
+	color: var(--color_primary) !important;
 	border: 2px solid;
 	border-color: var(--border_color_6);
 	box-shadow: var(--box_shadow_2);
@@ -43,6 +43,7 @@ ul {
 
 	& a {
 		padding: 8px;
+		color: var(--color_primary) !important;
 	}
 }
 

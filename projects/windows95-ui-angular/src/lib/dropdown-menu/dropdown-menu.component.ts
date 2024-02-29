@@ -37,7 +37,7 @@ export class DropdownMenu implements AfterViewInit {
 
 		let params: any = undefined;
 
-		if (queryParams) {
+		if(queryParams) {
 			params = queryParams;
 		}
 
@@ -63,7 +63,7 @@ export class DropdownMenu implements AfterViewInit {
 
 	checkIfHovering() {
 		setTimeout(() => {
-			if (!this.hoveringDropdownItems) {
+			if(!this.hoveringDropdownItems) {
 				this.hovering = false;
 			}
 		}, 1);
@@ -72,7 +72,7 @@ export class DropdownMenu implements AfterViewInit {
 	realignMenu() {
 		//Checks if the menu is is visible on screen and
 		//realigns the menu to fit within the viewport
-		if (this.isInViewport()) {
+		if(this.isInViewport()) {
 			let fbr = this.wrapper.getBoundingClientRect();
 			let mbr = this.menu.getBoundingClientRect();
 			this.menu.style.top = (fbr.top + fbr.height) + "px";
@@ -82,12 +82,12 @@ export class DropdownMenu implements AfterViewInit {
 			mbr = this.menu.getBoundingClientRect();
 
 			//Checks if the menu is overflowing the right side of the screen
-			if (mbr.left + mbr.width > window.innerWidth) {
+			if(mbr.left + mbr.width > window.innerWidth) {
 				//Moves the menu to the left
 				this.menu.style.left = (window.innerWidth - mbr.width) + "px";
 			}
 			//Checks if the menu is overflowing the bottom of the screen
-			if (mbr.top + mbr.height > window.innerHeight) {
+			if(mbr.top + mbr.height > window.innerHeight) {
 				//Moves the menu up
 				this.menu.style.top = (fbr.top - mbr.height) + "px";
 			}

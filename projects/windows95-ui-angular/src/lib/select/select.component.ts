@@ -39,7 +39,7 @@ export class Select implements OnChanges, AfterViewInit, OnDestroy {
 	@HostListener("document:mousedown", ["$event"])
 	onGlobalClick(event: Event) {
 		//Hides options if click is outside of selectWrapper
-		if (!this.selectWrapper.nativeElement.contains(event.target)) {
+		if(!this.selectWrapper.nativeElement.contains(event.target)) {
 			this.showOptions = false;
 			this.focusOptionDisplay = false;
 		}
@@ -68,10 +68,15 @@ export class Select implements OnChanges, AfterViewInit, OnDestroy {
 	}
 
 	ngOnChanges(changes: SimpleChanges) {
-		this.selectedOption = this.optionList.find(option => option.value === this.value);
-		this.selectedOptionIndex = this.optionList.findIndex(option => option.value === this.value);
-
-		this.changeDetector.detectChanges();
+		if(!!changes["options"]?.currentValue) {
+			this.optionList = changes["options"]?.currentValue;
+		}
+		if(!!changes["value"]?.currentValue) {
+			this.selectedOption = this.optionList.find(option => option.value === changes["value"]?.currentValue);
+			this.selectedOptionIndex = this.optionList.findIndex(option => option.value === changes["value"]?.currentValue);
+		}
+		
+		this.changeDetector.markForCheck();
 	}
 
 	ngOnDestroy() {

@@ -1,12 +1,12 @@
 <div class = "progress-bar-wrapper">
 	<div class = "progress-bar" #progressBar>
 		<div *ngIf = "showAsTiles;else other_content" class = "tile-progress-status">
-			<div *ngFor = "let tiles of getTileAmount()" class="progress-bars"></div>
+			<div *ngFor = "let tiles of getTileAmount()" class = "progress-bars"></div>
 		</div>
 
 		<ng-template #other_content>
-			<div class="progress-status" [style.width] = "getProgress()"></div>
+			<div class = "progress-status" [style.width] = "getProgress()"></div>
 		</ng-template>
-		<span *ngIf = "!hideStatus" class="progress-bar-number">{{progress}}%</span>
+		<span *ngIf = "!hideStatus" class = "progress-bar-number">{{progress}}%</span>
 	</div>
 </div>

@@ -1,7 +1,7 @@
-<div class="text-input-wrapper" [class.disabled] = "disabled">
+<div class = "text-input-wrapper" [class.disabled] = "disabled">
 	<ng-container *ngIf = "!isTextarea">
 		<input
-			type = "text"
+			[type] = "type"
 			[disabled] = "disabled"
 			[placeholder] = "placeholder"
 			[value] = "value"

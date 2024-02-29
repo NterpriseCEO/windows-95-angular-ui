@@ -4,7 +4,7 @@
 			<div class = "overflow-auto flex-grow-1">
 				<ng-container *ngIf = "isText(contents)">{{contents}}</ng-container>
 				<ng-container *ngIf = "!isText(contents)">
-					<ng-container *ngComponentOutlet="contents"></ng-container>
+					<ng-container *ngComponentOutlet = "contents; injector: injector"></ng-container>
 				</ng-container>
 			</div>
 			<div class = "buttons flex flex-row-reverse">
@@ -27,6 +27,7 @@
 				<windows-button
 					*ngFor = "let action of popupService.actions"
 					class = "button-margin"
+					[disabled] = "action?.disabled ?? false"
 					(click) = "action.action()"
 				>
 					{{action.text}}

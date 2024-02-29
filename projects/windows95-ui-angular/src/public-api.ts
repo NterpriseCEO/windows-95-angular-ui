@@ -20,3 +20,4 @@ export * from "./lib/file-input/public-api";
 export * from "./lib/password-input/public-api";
 export * from "./lib/tooltip/public-api";
 export * from "./lib/select/public-api";
+export * from "./lib/pick-list/public-api";

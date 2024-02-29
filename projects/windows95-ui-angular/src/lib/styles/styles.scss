@@ -1,9 +1,3 @@
-//////////////////////////////// Variables /////////////////////////////////
-:root {
-	--default_blue: #3A6EA5;
-	--default_teal: #00807F;
-}
-
 //////////////////////////////// Scrollbar ////////////////////////////////
 ::-webkit-scrollbar {
 	width: 26px;
@@ -64,6 +58,21 @@
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
 	background-image: var(--scrollbar_button_horizontal_increment);
 	background-position: 6px 3px;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:horizontal:start:increment,
+::-webkit-scrollbar-button:horizontal:end:decrement {
+	display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+	visibility: hidden !important;
 }
 
 /////////Components//////

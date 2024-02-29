@@ -1,0 +1,22 @@
+<div class = "pick-list" [class.show-background] = "showBackground">
+	<div *ngFor = "let item of items" class = "pick-list-items">
+		<span
+			class = "pick-list-item pick-list-parent"
+			(click) = "selectParentItem(item)"
+			[class.selected] = "item?.selected"
+		>
+			<span class = "arrow" (click) = "toggleExpandSubItems(item, $event)">{{item?.expanded ? '🞃' : '🞂'}}</span>
+			{{item.displayName}}
+		</span>
+		<div *ngIf = "item?.expanded" class = "pick-list-children">
+			<div
+				*ngFor = "let subItem of item?.subItems"
+				class = "pick-list-item pick-list-child"
+				[class.selected] = "subItem?.selected"
+				(click) = "selectChildItem(subItem)"
+			>
+				{{subItem.displayName}}
+			</div>
+		</div>
+	</div>
+</div>

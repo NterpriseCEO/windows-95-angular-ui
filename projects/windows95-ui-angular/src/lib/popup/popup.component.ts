@@ -1,4 +1,4 @@
-import { AfterViewChecked, ChangeDetectorRef, Component, OnDestroy } from "@angular/core";
+import { AfterViewChecked, ChangeDetectorRef, Component, Injector, OnDestroy } from "@angular/core";
 import { PopupAction } from "./popup-properties";
 import { PopupService } from "./popup-service";
 
@@ -12,6 +12,7 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 	visible: boolean = false;
 	title: string = "";
 	contents: any;
+	inputData?: any;
 
 	confirmText: string = "Yes";
 	rejectText: string = "No";
@@ -19,6 +20,8 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 	showRejectAction: boolean = true;
 
 	actions: PopupAction[] = [];
+
+	injector!: Injector;
 
 	constructor(public popupService: PopupService, private ref: ChangeDetectorRef) {
 		this.waitForPopup();
@@ -36,6 +39,7 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 			this.visible = true;
 			this.title = properties.title;
 			this.contents = properties.contents;
+			this.inputData = properties.inputData;
 			this.showConfirmAction = properties.showConfirmAction ?? true;
 			this.showRejectAction = properties.showRejectAction ?? true;
 			this.onReject = properties.onReject;
@@ -43,6 +47,15 @@ export class PopupComponent implements AfterViewChecked, OnDestroy {
 
 			this.confirmText = properties.confirmText ?? "Yes";
 			this.rejectText = properties.rejectText ?? "No";
+
+			// Passes the input data to the injector
+			// Which gets injected into the component
+			this.injector = Injector.create({
+				providers: [
+					{ provide: "inputData", useValue: this.inputData }
+				],
+				parent: this.injector
+			});
 		});
 
 		this.popupService.hidePopupSubject.subscribe(() => {

@@ -1,6 +1,7 @@
 export interface PopupProperties {
 	title: string;
 	contents: any;
+	inputData?: any;
 	confirmText?: string;
 	rejectText?: string;
 	showConfirmAction?: boolean;
@@ -11,5 +12,6 @@ export interface PopupProperties {
 
 export interface PopupAction{
 	text: string;
+	disabled?: boolean;
 	action: () => void;
 }

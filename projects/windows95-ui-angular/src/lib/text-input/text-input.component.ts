@@ -13,6 +13,7 @@ export class TextInput {
 	@Input() isTextarea: boolean = false;
 	@Input() rows: number = 2;
 	@Input() cols: number = 20;
+	@Input() type = "text";
 
 	@Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 

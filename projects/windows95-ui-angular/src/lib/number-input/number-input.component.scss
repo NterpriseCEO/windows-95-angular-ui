@@ -156,22 +156,22 @@ button {
 
 .button-increment {
 	& span {
-		border-bottom: 4px solid var(--arrow_color);
+		border-bottom: 4px solid var(--color_primary);
 	}
 
 	&:disabled span {
 		filter: drop-shadow(var(--box_shadow_7));
-		border-bottom-color: var(--border_color_8);
+		border-bottom-color: var(--color_primary);
 	}
 }
 
 .button-decrement {
 	& span {
-		border-top: 4px solid var(--arrow_color);
+		border-top: 4px solid var(--color_primary);
 	}
 
 	&:disabled span {
 		filter: drop-shadow(var(--box_shadow_7));
-		border-top-color: var(--border_color_8);
+		border-top-color: var(--color_primary);
 	}
 }

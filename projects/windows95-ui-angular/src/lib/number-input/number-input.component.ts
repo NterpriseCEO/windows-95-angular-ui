@@ -46,8 +46,8 @@ export class NumberInput {
 	}
 
 	changeValue(event: any) {
-		this.value = event.value;
-		this.valueChange.emit(event.value);
+		this.value = +event.value;
+		this.valueChange.emit(this.value);
 	}
 
 	cancelValueChange() {
