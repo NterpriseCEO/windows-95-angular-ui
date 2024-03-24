@@ -1,0 +1,11 @@
+<windows-panel>
+	<windows-button (click) = "changePage(-1)"><</windows-button>
+	<windows-button
+		*ngFor = "let page of pages"
+		[styleClass]="page === currentPage ? 'bold-font' : ''"
+		(click) = "goToPage(page)"
+	>
+		{{page + 1}}
+	</windows-button>
+	<windows-button (click) = "changePage(1)">></windows-button>
+</windows-panel>

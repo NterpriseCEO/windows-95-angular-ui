@@ -59,3 +59,7 @@ a {
 a:visited {
 	color: rgb(10, 36, 106) !important;
 }
+
+.validation-error-color {
+	color: red !important;
+}

@@ -49,7 +49,6 @@
 	--outline_dotted_2: 2px dotted 2px dotted rgb(252, 246, 189) !important;
 }
 
-
 .page-background-color-primary {
 	background-color: rgb(0, 128, 128) !important;
 }
@@ -59,4 +58,8 @@ a {
 }
 a:visited {
 	color: rgb(68, 3, 129) !important;
+}
+
+.validation-error-color {
+	color: rgb(255, 174, 0) !important;
 }

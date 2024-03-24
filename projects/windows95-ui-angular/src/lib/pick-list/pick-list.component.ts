@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, HostBinding, Input, Output } from "@angular/core";
 
 @Component({
-	selector: 'pick-list',
-	templateUrl: './pick-list.component.html',
-	styleUrls: ['./pick-list.component.scss'],
+	selector: "pick-list",
+	templateUrl: "./pick-list.component.html",
+	styleUrls: ["./pick-list.component.scss"],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PickListComponent {

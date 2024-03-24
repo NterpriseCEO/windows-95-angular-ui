@@ -1338,6 +1338,11 @@ a.unstyled {
 	cursor: vertical-text !important;
 }
 
+///////Pointer events/////////
+.pointer-events-none {
+	pointer-events: none;
+}
+
 ///////Display classes/////////
 .hidden {
 	display: none;
